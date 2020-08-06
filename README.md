@@ -1,4 +1,4 @@
-# shop_app
+# E-commerce Complate Flutter UI Staring code
 
 A new Flutter project.
 
