@@ -1,6 +1,6 @@
 # E-Commerce Complate Flutter UI Staring code
 
-<span style="color:red"> ## Note that: This is not complete yet</span>
+### Note that: This is not complete yet
 
 ## [Watch it on YouTube](https://youtu.be/YEJPg2jwzI8)
 
