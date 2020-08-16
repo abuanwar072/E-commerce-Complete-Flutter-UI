@@ -12,4 +12,6 @@ Complete responsive e-commerce app UI by using flutter.
 
 ### Previews of Final UI
 
-![Preview](/splash_intro.gif)
+![Preview](/intro.gif)
+![Preview](/1.png)
+![Preview](2.png)
