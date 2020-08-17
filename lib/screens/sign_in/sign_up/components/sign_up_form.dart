@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shop_app/components/custom_surfix_icon.dart';
 import 'package:shop_app/components/default_button.dart';
 import 'package:shop_app/components/form_error.dart';
+import 'package:shop_app/screens/complete_profile/complete_profile_screen.dart';
 import 'package:shop_app/screens/login_success/login_success_screen.dart';
 
 import '../../../../constants.dart';
@@ -53,7 +54,7 @@ class _SignUpFormState extends State<SignUpForm> {
               if (_formKey.currentState.validate()) {
                 _formKey.currentState.save();
                 // if all are valid then go to success screen
-                Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+                Navigator.pushNamed(context, CompleteProfileScreen.routeName);
               }
             },
           ),
