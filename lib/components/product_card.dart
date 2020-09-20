@@ -40,7 +40,10 @@ class ProductCard extends StatelessWidget {
                     color: kSecondaryColor.withOpacity(0.1),
                     borderRadius: BorderRadius.circular(15),
                   ),
-                  child: Image.asset(product.images[0]),
+                  child: Hero(
+                    tag: product.id.toString(),
+                    child: Image.asset(product.images[0]),
+                  ),
                 ),
               ),
               const SizedBox(height: 10),
