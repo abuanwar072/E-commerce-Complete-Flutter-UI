@@ -4,13 +4,16 @@ import 'package:shop_app/enums.dart';
 
 import 'components/body.dart';
 
-class HomeScreen extends StatelessWidget {
-  static String routeName = "/home";
+class ProfileScreen extends StatelessWidget {
+  static String routeName = "/profile";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Profile"),
+      ),
       body: Body(),
-      bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.home),
+      bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.profile),
     );
   }
 }
