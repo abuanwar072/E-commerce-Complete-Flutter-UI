@@ -18,7 +18,7 @@ class CustomBottomNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final Color inActiveIconColor = Color(0xFFB6B6B6);
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 20),
+      padding: EdgeInsets.symmetric(vertical: 14),
       decoration: BoxDecoration(
         color: Colors.white,
         boxShadow: [
@@ -34,38 +34,40 @@ class CustomBottomNavBar extends StatelessWidget {
         ),
       ),
       child: SafeArea(
+          top: false,
           child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          IconButton(
-            icon: SvgPicture.asset(
-              "assets/icons/Shop Icon.svg",
-              color: MenuState.home == selectedMenu
-                  ? kPrimaryColor
-                  : inActiveIconColor,
-            ),
-            onPressed: () => Navigator.pushNamed(context, HomeScreen.routeName),
-          ),
-          IconButton(
-            icon: SvgPicture.asset("assets/icons/Heart Icon.svg"),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: SvgPicture.asset("assets/icons/Chat bubble Icon.svg"),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: SvgPicture.asset(
-              "assets/icons/User Icon.svg",
-              color: MenuState.profile == selectedMenu
-                  ? kPrimaryColor
-                  : inActiveIconColor,
-            ),
-            onPressed: () =>
-                Navigator.pushNamed(context, ProfileScreen.routeName),
-          ),
-        ],
-      )),
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              IconButton(
+                icon: SvgPicture.asset(
+                  "assets/icons/Shop Icon.svg",
+                  color: MenuState.home == selectedMenu
+                      ? kPrimaryColor
+                      : inActiveIconColor,
+                ),
+                onPressed: () =>
+                    Navigator.pushNamed(context, HomeScreen.routeName),
+              ),
+              IconButton(
+                icon: SvgPicture.asset("assets/icons/Heart Icon.svg"),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: SvgPicture.asset("assets/icons/Chat bubble Icon.svg"),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: SvgPicture.asset(
+                  "assets/icons/User Icon.svg",
+                  color: MenuState.profile == selectedMenu
+                      ? kPrimaryColor
+                      : inActiveIconColor,
+                ),
+                onPressed: () =>
+                    Navigator.pushNamed(context, ProfileScreen.routeName),
+              ),
+            ],
+          )),
     );
   }
 }
