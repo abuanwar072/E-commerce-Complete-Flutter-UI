@@ -15,7 +15,7 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return ListView(
       children: [
         ProductImages(product: product),
         TopRoundedContainer(
