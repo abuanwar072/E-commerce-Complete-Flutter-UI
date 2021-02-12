@@ -1,49 +1,18 @@
-# E-Commerce Complate App - Flutter UI 
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/abuanwar072/E-commerce-App-UI-Flutter)
 
-In the first part of our complete e-commerce app, we show you how you can create a nice clean onboarding screen for your e-commerce app that can run both Andriod and iOS devices because it builds with flutter. Then on the second episode, we build a Sign in, Forgot Password screen with a custom error indicator. The third Episode contains Sign Up and OTP screen. The fourth episode is the most exciting episode because we build our home page on this episode than on the fifth episode we work on our product page, last not least on the 6th episode we build an order screen which has some cool stuff like swipe to remove. At the end 7th episode we build a profile screen. 
+# E-commerce App - Flutter UI
 
-## [Watch it on YouTube](https://youtube.com/playlist?list=PLxUBb2A_UUy8OlaNZpS2mfL8xpHcnd_Af)
+## [Watch it on YouTube](https://youtu.be/XBKzpTz65Io)
 
 **Packages we are using:**
 
 - flutter_svg: [link](https://pub.dev/packages/flutter_svg)
 
 
-### Video Preview of Final UI
+On our E-commerce app UI has two pages one for the product page which has a horizontal list of categories then a list of our products. Then on the details page, it shows the price and short description of the product with the Buy Now button. The best part of our E-commerce app is, each product has its own color which looks great.
 
-![Preview](/intro.gif)
+### E-commerce App Final UI
 
-## Screens it contains:
+![intro](intro.gif)
 
-=> Onboarding
-
-=> Login
-
-=> Forgot Password
-
-=> Sign Up
-
-=> Complete Profile
-
-=> OTP Verification
-
-=> Home Page
-
-=> Product Details
-
-=> Order
-
-=> Profile (added)
-
-=> Bottom Navigation Bar (added)
-
-Now it contains all the screen, thanks for your love and support 🙏 
-
-## Photos
-![Preview](/1.png)
-![Preview](2.png)
-![Preview](3.png)
-![Preview](4.png)
-![Preview](5.png)
-![Preview](6.png)
-![Preview](7.png)
+![App UI](/ui.png)
