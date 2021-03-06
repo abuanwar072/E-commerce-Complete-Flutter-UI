@@ -28,7 +28,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.3
   # if you are using latest flutter please update your flutter_svg package to ^0.18.*
-  flutter_svg: ^0.18.0 # help us to use SVG in our app
+  flutter_svg: ^0.19.1 # help us to use SVG in our app
   provider: ^4.3.1 # for State management
 
 dev_dependencies:
