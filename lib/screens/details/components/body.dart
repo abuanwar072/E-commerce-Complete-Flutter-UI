@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:shop_app/components/default_button.dart';
+import 'package:shop_app/models/Cart.dart';
 import 'package:shop_app/models/Product.dart';
 import 'package:shop_app/size_config.dart';
 
@@ -40,9 +42,18 @@ class Body extends StatelessWidget {
                           bottom: getProportionateScreenWidth(40),
                           top: getProportionateScreenWidth(15),
                         ),
-                        child: DefaultButton(
-                          text: "Add To Cart",
-                          press: () {},
+                        child: Consumer<Cart>(
+                          builder: (context, cart, child) => DefaultButton(
+                            text: "Add To Cart",
+                            press: () {
+                              cart.addItemToCart(
+                                product.id.toString(),
+                                product.title,
+                                product.price,
+                                product.images,
+                              );
+                            },
+                          ),
                         ),
                       ),
                     ),

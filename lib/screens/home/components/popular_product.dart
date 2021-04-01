@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:shop_app/components/product_card.dart';
 import 'package:shop_app/models/Product.dart';
 
@@ -8,6 +9,8 @@ import 'section_title.dart';
 class PopularProducts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final productsData = Provider.of<Products>(context, listen: false);
+    final products = productsData.allProducts;
     return Column(
       children: [
         Padding(
@@ -21,10 +24,13 @@ class PopularProducts extends StatelessWidget {
           child: Row(
             children: [
               ...List.generate(
-                demoProducts.length,
+                products.length,
                 (index) {
-                  if (demoProducts[index].isPopular)
-                    return ProductCard(product: demoProducts[index]);
+                  if (products[index].isPopular)
+                    return ChangeNotifierProvider.value(
+                      value: products[index],
+                      child: ProductCard(),
+                    );
 
                   return SizedBox
                       .shrink(); // here by default width and height is 0

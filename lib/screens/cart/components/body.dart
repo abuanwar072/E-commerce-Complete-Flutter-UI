@@ -1,32 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:provider/provider.dart';
 import 'package:shop_app/models/Cart.dart';
 
 import '../../../size_config.dart';
 import 'cart_card.dart';
 
-class Body extends StatefulWidget {
-  @override
-  _BodyState createState() => _BodyState();
-}
-
-class _BodyState extends State<Body> {
+class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final cart = Provider.of<Cart>(context);
+    final cartItems = cart.items.values.toList();
+    final itemsKeys = cart.items.keys.toList();
     return Padding(
       padding:
           EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
       child: ListView.builder(
-        itemCount: demoCarts.length,
+        itemCount: cartItems.length,
         itemBuilder: (context, index) => Padding(
           padding: EdgeInsets.symmetric(vertical: 10),
           child: Dismissible(
-            key: Key(demoCarts[index].product.id.toString()),
+            key: Key(cartItems[index].id.toString()),
             direction: DismissDirection.endToStart,
             onDismissed: (direction) {
-              setState(() {
-                demoCarts.removeAt(index);
-              });
+              cart.removeItem(itemsKeys[index]);
             },
             background: Container(
               padding: EdgeInsets.symmetric(horizontal: 20),
@@ -41,7 +38,13 @@ class _BodyState extends State<Body> {
                 ],
               ),
             ),
-            child: CartCard(cart: demoCarts[index]),
+            child: CartCard(
+              id: cartItems[index].id,
+              title: cartItems[index].title,
+              price: cartItems[index].price,
+              images: cartItems[index].images,
+              quantity: cartItems[index].quantity,
+            ),
           ),
         ),
       ),
