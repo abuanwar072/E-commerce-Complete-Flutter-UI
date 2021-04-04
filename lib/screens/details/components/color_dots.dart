@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:shop_app/components/rounded_icon_btn.dart';
+import 'package:shop_app/models/Cart.dart';
 import 'package:shop_app/models/Product.dart';
 
 import '../../../constants.dart';
@@ -17,6 +19,7 @@ class ColorDots extends StatelessWidget {
   Widget build(BuildContext context) {
     // Now this is fixed and only for demo
     int selectedColor = 3;
+    final cart = Provider.of<Cart>(context);
     return Padding(
       padding:
           EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
@@ -32,13 +35,19 @@ class ColorDots extends StatelessWidget {
           Spacer(),
           RoundedIconBtn(
             icon: Icons.remove,
-            press: () {},
+            press: () {
+              cart.decreaseQuantity(product.id.toString(), product.title,
+                  product.price, product.images);
+            },
           ),
           SizedBox(width: getProportionateScreenWidth(20)),
           RoundedIconBtn(
             icon: Icons.add,
             showShadow: true,
-            press: () {},
+            press: () {
+              cart.increaseQuantity(product.id.toString(), product.title,
+                  product.price, product.images);
+            },
           ),
         ],
       ),

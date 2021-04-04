@@ -30,6 +30,7 @@ dependencies:
   # if you are using latest flutter please update your flutter_svg package to ^0.18.*
   flutter_svg: ^0.19.1 # help us to use SVG in our app
   provider: ^4.3.1 # for State management
+  intl: ^0.15.8    # for Date Format
 
 dev_dependencies:
   flutter_test:

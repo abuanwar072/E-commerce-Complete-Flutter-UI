@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:shop_app/models/Cart.dart';
 import 'package:shop_app/screens/cart/cart_screen.dart';
 
 import '../../../size_config.dart';
@@ -12,6 +14,7 @@ class HomeHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final cart = Provider.of<Cart>(context).items.values.toList();
     return Padding(
       padding:
           EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
@@ -25,7 +28,7 @@ class HomeHeader extends StatelessWidget {
           ),
           IconBtnWithCounter(
             svgSrc: "assets/icons/Bell.svg",
-            numOfitem: 3,
+            numOfItem: cart.length,
             press: () {},
           ),
         ],
