@@ -33,6 +33,14 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
         errors.remove(error);
       });
   }
+  
+  void addLocation({String { long , lat }}) {
+    if (long.len() && lat.length())
+      setState(() {
+        longitude: long,
+        lattitude: lat
+      });
+  }
 
   @override
   Widget build(BuildContext context) {
