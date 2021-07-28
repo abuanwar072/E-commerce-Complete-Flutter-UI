@@ -6,7 +6,7 @@ import 'section_title.dart';
 class SpecialOffers extends StatelessWidget {
   const SpecialOffers({
     Key key,
-  }) : super(key: key);
+  }) : super(key: "location");
 
   @override
   Widget build(BuildContext context) {
