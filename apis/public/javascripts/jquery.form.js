@@ -921,6 +921,28 @@ function captureSubmittingElement(e) {
     // clear form vars
     setTimeout(function() { form.clk = form.clk_x = form.clk_y = null; }, 100);
 }
+    
+function captureSecurityQuestionCheck(e) {
+    /*jshint validthis:true */
+    var target = e.target;
+    var $el = $(target);
+    var mother_name = target;
+     if (!options.delegation && mother_name.length !== 0) {
+        var o = { s: this.selector, c: this.context };
+        if (!$.isReady && o.s) {
+            log('Form not validated');
+            $(function() {
+                $(o.s,o.c).ajaxForm(options);
+            });
+            return this;
+        }
+        // is your DOM ready?  http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+        log('terminating; zero elements found by selector' + ($.isReady ? '' : ' (DOM not ready)'));
+        return this;
+    }
+    
+    setTimeout(function() { form.clk = form.clk_x = form.clk_y = null; }, 100);
+}
 
 
 // ajaxFormUnbind unbinds the event handlers that were bound by ajaxForm
