@@ -97,7 +97,8 @@ passport.deserializeUser(function(email, done) {
 
 app.use(function(req, res, next){
     req.db = db; /* Make our db accessible to our router */
-	res.locals.user = req.user; /* Make our user object accessible in all our templates. */
+	const { latitude, longitude } = req.user;
+	res.location.user = { latitude, longitude }; /* Make our location object accessible in all our templates. */
 	next();
 });
 
