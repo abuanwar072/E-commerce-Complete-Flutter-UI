@@ -1,0 +1,31 @@
+extends ../layout
+
+block content
+	.container.products-view-all
+		form.post-list
+			input(type='hidden', value='')
+		.clearfix
+			article.navbar-form.navbar-left.p-0.m-0.ml-b
+				.form-group
+					label Per Page: 
+					select.form-control.post_max.m-b
+						option(value='4') 4
+						option(value='8') 8
+						option(value='16') 16
+				label Search Keyword: 
+					input.form-control.post_search_text.m-b(type='text', placeholder='Enter a keyword')
+				.form-group
+					label Order By: 
+					select.form-control.post_name.m-b
+						option(value='name') Title
+						option(value='price') Price
+						option(value='stock') On Stock
+					select.form-control.post_sort.m-b
+						option(value='ASC') ASC
+						option(value='DESC') DESC
+				input.btn.btn-primary.post_search_submit.m-b(type='submit', value='Filter')
+		hr
+			
+		.clearfix
+			.pagination-container.clearfix
+			.pagination-nav

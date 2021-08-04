@@ -1,0 +1,55 @@
+extends ../layout
+
+block content
+	.container.wave-box-wrapper
+		.wave-box
+		form.update-account(action='/user/account/update', method='post')
+			.col-md-10.col-md-offset-1
+				.panel.panel-default
+					.panel-heading My Account
+					.panel-body
+						.form-group.clearfix
+							label.col-md-4.control-label.text-right
+								| Email
+								span.text-red
+									| :
+							.col-md-6
+								input.form-control(type='text', name='email', value='#{user.email}', disabled='')
+						
+						.form-group.clearfix
+							label.col-md-4.control-label.text-right Old password:
+							.col-md-6
+								input.form-control(type='password', name='old_password', value='')
+						
+						.form-group.clearfix
+							label.col-md-4.control-label.text-right New password:
+							.col-md-6
+								input.form-control(type='password', name='password', value='')
+						
+						.form-group.clearfix
+							label.col-md-4.control-label.text-right Confirm New password:
+							.col-md-6
+								input.form-control(type='password', name='password_confirm', value='')
+						
+						.form-group.clearfix
+							label.col-md-4.control-label.text-right First Name:
+							.col-md-6
+								input.form-control(type='first_name', name='first_name', value='#{user.first_name}')
+						
+						.form-group.clearfix
+							label.col-md-4.control-label.text-right Last Name:
+							.col-md-6
+								input.form-control(type='last_name', name='last_name', value='#{user.last_name}')
+						
+						.form-group.clearfix
+							label.col-md-4.control-label.text-right Phone Number:
+							.col-md-6
+								input.form-control(type='phone_number', name='phone_number', value='#{user.phone_number}')
+						
+						.form-group.clearfix
+							label.col-md-4.control-label.text-right About Me:
+							.col-md-6
+								textarea#ck-editor-area.form-control(name='about_me') #{user.about_me}
+						
+						.col-md-6.col-md-offset-4
+							input.btn.btn-success(type='submit', value='Update')

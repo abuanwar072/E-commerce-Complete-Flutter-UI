@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+	.container
+		form(method='post', action='/user/login')
+			.col-md-8.col-md-offset-2
+				.panel.panel-default
+					.panel-heading Login
+					.panel-body
+						if message != ''
+							p.bg-danger.p-d #{message}
+						.form-group.clearfix
+							label.col-md-4.control-label.text-right(for='email') Email:
+							.col-md-6
+								input.form-control(name='email', value="", type='text')
+						.form-group.clearfix
+							label.col-md-4.control-label.text-right(for='password') Password:
+							.col-md-6
+								input.form-control(name='password', type='password')
+						.col-md-6.col-md-offset-4
+							input.btn.btn-success(name='login', type='submit', value='Login')

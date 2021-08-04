@@ -1,0 +1,42 @@
+extends ../layout
+
+block content
+	.container.wave-box-wrapper
+		.wave-box
+		form.create-account(action="/user/register/create", method="post")
+			.col-md-8.col-md-offset-2
+				.panel.panel-default
+					.panel-heading Register
+					.panel-body
+						.form-group.clearfix
+							label.col-md-4.control-label.text-right
+								| Email
+								span.text-red *
+									| :
+							.col-md-6
+								input.form-control(type="text", name="email", value="")
+						.form-group.clearfix
+							label.col-md-4.control-label.text-right
+								| Password
+								span.text-red *
+									| :
+							.col-md-6
+								input.form-control(type="password", name="password", value="")
+						.form-group.clearfix
+							label.col-md-4.control-label.text-right Confirm password:
+							.col-md-6
+								input.form-control(type="password", name="password2", value="")
+						.form-group.clearfix
+							label.col-md-4.control-label.text-right First Name:
+							.col-md-6
+								input.form-control(type="first_name", name="first_name", value="")
+						.form-group.clearfix
+							label.col-md-4.control-label.text-right Last Name:
+							.col-md-6
+								input.form-control(type="last_name", name="last_name", value="")
+						.form-group.clearfix
+							label.col-md-4.control-label.text-right Phone Number:
+							.col-md-6
+								input.form-control(type="phone_number", name="phone_number", value="")
+						.col-md-6.col-md-offset-4
+							input.btn.btn-success(type="submit", value="Register")

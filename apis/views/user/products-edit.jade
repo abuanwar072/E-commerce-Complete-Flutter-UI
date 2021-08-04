@@ -1,0 +1,69 @@
+extends ../layout
+
+block content
+	.container.item-edit(id='item-#{item._id}')
+		p.ml-b
+			a.ml-b.text-success(href='/user/products')
+				span.glyphicon.glyphicon-chevron-left
+				|  All products
+			.panel.panel-default
+				.panel-heading
+					| Add Product
+				.panel-body
+					form.update-product(method='post', action='/user/products/update', enctype='multipart/form-data')
+						input(type='hidden', name='id' value='#{item._id}')
+						.col-md-8
+							.form-group
+								label Name*
+								input.form-control.required(type='text', name='name', value='#{item.name}')
+							.form-group
+								label Description
+								textarea#ck-editor-area.form-control(name='content') #{item.content}
+							.form-group
+								label Short Description
+								textarea.form-control(name='excerpt', rows='7') #{item.excerpt}
+							.form-group.ml-t
+								label Upload Images
+								input.form-control.image-input(type='file', name='images', accept='image/*', multiple='')
+								hr
+								.clearfix.m-t.images-section
+									- if (item.images){
+										- var image_count = 1;
+										each image, i in item.images
+											.col-sm-3
+												span.unset-image.glyphicon.glyphicon-remove.text-danger.lead.m-0.c-p(id='unset-#{image}', title='Delete image')
+												- if (item.featured_image == image){
+													span.set-featured-image.glyphicon.glyphicon-star.lead.m-0.c-p(title='Set as featured image', id='featured-#{image}', style='color: #E4C317')
+												- } else {
+													span.set-featured-image.glyphicon.glyphicon-star-empty.lead.m-0.c-p(title='Set as featured image', id='featured-#{image}')
+												- }
+												img.img-thumbnail.img-responsive(src='/images/uploads/#{image}')
+											- if( image_count%4 == 0 ){
+												.clearfix
+											- }
+											- image_count++;
+									- } else {
+										p.alert.alert-danger.no-item-images No images found
+									- }
+						.col-md-4
+							.form-group
+								label Price*
+								.input-group
+									.input-group-addon $
+									input.form-control.required(type='text', name='price', value='#{item.price}', placeholder='Amount')
+							.form-group
+								label Status
+								- var select=null; if (item.status == 0) select='selected';
+								select.form-control(name='status')
+									option(value='1') Active
+									option(value='0', selected=select) Inactive
+							.form-group
+								label Date
+								.input-group.date.datepicker
+									input.form-control(type='text', name='date', value='#{item.date}')
+									span.input-group-addon
+										span.glyphicon.glyphicon-calendar
+							.form-group
+								label On Stock*
+								input.form-control.required(type='number', name='stock', value='#{item.stock}')
+							input.btn.btn-success(type='submit', value='Update')

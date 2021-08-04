@@ -1,0 +1,27 @@
+{
+  "name": "nodetest1",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "async": "^2.0.1",
+    "body-parser": "~1.12.4",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.3.5",
+    "crypto-md5": "^1.0.0",
+    "debug": "~2.2.0",
+    "express": "~4.12.4",
+    "express-session": "^1.14.1",
+    "jade": "~1.9.2",
+    "mongodb": "^1.4.4",
+    "monk": "^1.0.1",
+    "morgan": "~1.5.3",
+    "multer": "^1.2.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "serve-favicon": "~2.2.1",
+    "socket.io": "^1.4.8"
+  }
+}

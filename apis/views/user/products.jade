@@ -1,0 +1,39 @@
+extends ../layout
+
+block content
+	.container.products-view-user
+		form.post-list
+			input(type='hidden', value='')
+		article.navbar-form.navbar-left.p-0.m-0.ml-b
+			.form-group
+				label Per Page: 
+				select.form-control.post_max
+					option(value='4') 4
+					option(value='8') 8
+					option(value='16') 16
+				label Search Keyword: 
+				input.form-control.post_search_text(type='text', placeholder='Enter a keyword')
+				input.btn.btn-primary.post_search_submit(type='submit', value='Filter')
+		
+		a.btn.btn-success.pull-right(href='/user/products/add') Add New
+		br.clear
+		
+		.wave-box-wrapper
+			.wave-box
+			table.table.table-striped.table-post-list.no-margin
+				thead
+					tr
+					th Image
+					th#name.active
+						a(href='#') Name
+					th#price
+						a(href='#') Price
+					th#status
+						a(href='#') Status
+					th#date
+						a(href='#') Date
+					th#stock
+						a(href='#') On Stock
+					th Action
+				tbody.pagination-container
+			.pagination-nav

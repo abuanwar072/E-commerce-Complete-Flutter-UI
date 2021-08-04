@@ -1,0 +1,44 @@
+extends ../layout
+
+block content
+	.container
+		p.ml-b
+			a.ml-b.text-success(href='/user/products')
+				span.glyphicon.glyphicon-chevron-left
+				|  All products
+			.panel.panel-default
+				.panel-heading
+					| Add Product
+				.panel-body
+					form.create-product(method='post', action='/user/products/create')
+						.col-md-8
+							.form-group
+								label Name*
+								input.form-control.required(type='text', name='name', value='')
+							.form-group
+								label Description
+								textarea#ck-editor-area.form-control(name='content')
+							.form-group
+								label Short Description
+								textarea.form-control(name='excerpt', rows='7')
+						.col-md-4
+							.form-group
+								label Price*
+								.input-group
+									.input-group-addon $
+									input.form-control.required(type='text', name='price', value='', placeholder='Amount')
+							.form-group
+								label Status
+								select.form-control(name='status')
+									option(value='1') Active
+									option(value='0') Inactive
+							.form-group
+								label Date
+								.input-group.date.datepicker
+									input.form-control(type='text', name='date', value='')
+									span.input-group-addon
+										span.glyphicon.glyphicon-calendar
+							.form-group
+								label On Stock*
+								input.form-control.required(type='number', name='stock', value='')
+							input.btn.btn-success(type='submit', value='Submit')

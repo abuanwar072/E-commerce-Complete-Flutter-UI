@@ -1,0 +1,67 @@
+extends ../layout
+
+block content
+	.container.products-view(class='item-#{item._id}')
+		.col-md-8
+			.panel.panel-default
+				.panel-heading.item-name
+					| #{item.name}
+				.panel-body
+					input.item-images-json(type='hidden', value='#{item_images}')
+					.imageviewer
+						.image-container
+						span.glyphicon.glyphicon-chevron-left.prev
+						span.glyphicon.glyphicon-chevron-right.next
+						.footer-info
+							span.current
+							| /
+							span.total
+					hr
+					h3 Product Description
+					.item-content
+						| !{item.content}
+		.col-md-4
+			.panel.panel-default
+				.panel-heading
+					| Product Details
+				.panel-body
+					h2.text-danger.m-0.ml-b
+						| $
+						span.item-price
+							| #{parseFloat(item.price).toFixed(2)}
+						small &nbsp; only
+					.clearfix
+						.col-md-6
+							span.sr-only Four out of Five Stars
+							span.glyphicon.glyphicon-star(aria-hidden='true')
+							span.glyphicon.glyphicon-star(aria-hidden='true')
+							span.glyphicon.glyphicon-star(aria-hidden='true')
+							span.glyphicon.glyphicon-star(aria-hidden='true')
+							span.glyphicon.glyphicon-star-empty(aria-hidden='true')
+							span.label.label-success 7
+						.col-md-6
+							a.monospaced(href='#_')
+								span.glyphicon.glyphicon-pencil
+								|  Write a Review
+					hr
+					p
+						strong Date Posted
+						| :
+						span.item-date
+							| #{item.date} 
+					p
+						strong On Stock
+						| :
+						span.item-stock
+							| #{item.stock} 
+					hr
+					a.btn.btn-success.btn-block(href='#_')
+						span.glyphicon.glyphicon-shopping-cart
+						|  Add to Cart
+					a.btn.btn-primary.btn-block(href='#_')
+						span.glyphicon.glyphicon-star
+						|  Add to Wishlist
+			.panel.panel-default
+				.panel-heading
+					| Reviews
+				.panel-body

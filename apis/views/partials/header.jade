@@ -1,0 +1,48 @@
+doctype html
+html
+	head
+		title= title
+		
+		link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css')
+		link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css')
+		link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/flatly/bootstrap.min.css')
+		link(rel='stylesheet', href='/libraries/lobibox/lobibox.min.css')
+		link(rel='stylesheet', href='/libraries/imageviewer/imageviewer.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	
+	body.override
+		nav.navbar.navbar-inverse(role="navigation")
+			div.container
+				div.navbar-header
+					button(type="button", data-toggle="collapse", data-target="#navbar", aria-expanded="false").navbar-toggle.collapsed
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a(href="/").navbar-brand 
+						img.d-ib.ml-r(src="/images/logo.png", width="22")
+						| Node.js E-commerce
+				
+				div#navbar.collapse.navbar-collapse
+					ul.nav.navbar-nav.navbar-right
+						li
+							a(href="/products") Products
+							if user
+								li.dropdown
+									a(href="#", data-toggle="dropdown", role="button", aria-haspopup="true", aria-expanded="false").dropdown-toggle Dashboard 
+										span.caret
+									ul.dropdown-menu
+										li
+											a(href="/user/account") Account
+										li
+											a(href="/user/products") My Products
+										li
+											a(href="/user/products/add") Add Product
+							if user
+								li
+									a(href="/user/logout") Logout
+							else 
+								li
+									a(href="/user/register") Register
+								li
+									a(href="/user/login") Login
