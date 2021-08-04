@@ -17,6 +17,7 @@ class ProfilePic extends StatelessWidget {
         children: [
           CircleAvatar(
             backgroundImage: AssetImage("assets/images/Profile Image.png"),
+            mobile_ratio: 5.5
           ),
           Positioned(
             right: -16,
