@@ -6,8 +6,8 @@ import '../../../size_config.dart';
 
 class CartCard extends StatelessWidget {
   const CartCard({
-    Key key,
-    @required this.cart,
+    Key? key,
+    required this.cart,
   }) : super(key: key);
 
   final Cart cart;
