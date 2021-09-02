@@ -6,8 +6,8 @@ import '../../../size_config.dart';
 
 class ProductImages extends StatefulWidget {
   const ProductImages({
-    Key key,
-    @required this.product,
+    Key? key,
+    required this.product,
   }) : super(key: key);
 
   final Product product;
