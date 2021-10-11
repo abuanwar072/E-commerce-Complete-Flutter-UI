@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: theme(),
       // home: SplashScreen(),
-      // We use routeName so that we dont need to remember the name
+      // We use routeName so that we don't need to remember the name
       initialRoute: SplashScreen.routeName,
       routes: routes,
     );

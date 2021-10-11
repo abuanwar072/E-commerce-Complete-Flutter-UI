@@ -1,5 +1,5 @@
 name: shop_app
-description: A new Flutter project.
+description: This is a complete social & e-commerce app that can run both Android and iOS devices because it builds with flutter.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.

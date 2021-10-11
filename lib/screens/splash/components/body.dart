@@ -16,12 +16,12 @@ class _BodyState extends State<Body> {
   int currentPage = 0;
   List<Map<String, String>> splashData = [
     {
-      "text": "Welcome to Tokoto, Let’s shop!",
+      "text": "Welcome to ABIBITUMU, Let’s shop!",
       "image": "assets/images/splash_1.png"
     },
     {
       "text":
-          "We help people conect with store \naround United State of America",
+          "We help people connect with store \naround Africa",
       "image": "assets/images/splash_2.png"
     },
     {
@@ -29,13 +29,14 @@ class _BodyState extends State<Body> {
       "image": "assets/images/splash_3.png"
     },
   ];
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: SizedBox(
         width: double.infinity,
         child: Column(
-          children: <Widget>[
+          children:  [
             Expanded(
               flex: 3,
               child: PageView.builder(
@@ -57,7 +58,7 @@ class _BodyState extends State<Body> {
                 padding: EdgeInsets.symmetric(
                     horizontal: getProportionateScreenWidth(20)),
                 child: Column(
-                  children: <Widget>[
+                  children: [
                     Spacer(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
