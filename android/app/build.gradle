@@ -60,4 +60,8 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+        if (amplitudeUseLocal.toBoolean()) {
+        compile files('libs/amplitude-android-' + amplitudeVersion + '-with-dependencies.jar')
+    } else {
+        compile 'com.amplitude:android-sdk:' + amplitudeVersion
 }
