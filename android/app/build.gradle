@@ -60,6 +60,7 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.stripe:stripe-android:14.1.0'
     implementation 'com.paypal.sdk:paypal-android-sdk:2.14.2'
         if (amplitudeUseLocal.toBoolean()) {
         compile files('libs/amplitude-android-' + amplitudeVersion + '-with-dependencies.jar')
