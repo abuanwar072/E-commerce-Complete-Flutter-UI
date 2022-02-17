@@ -1,0 +1,1248 @@
+{
+  "repoId": "repoId",
+  "repoName": "mobile-app-android",
+  "repoURL": "",
+  "branchName": "master",
+  "commitId": "",
+  "customerId": "cliCustomer",
+  "scanId": null,
+  "permissionList": [
+    {
+      "category": "Location Data",
+      "element": "Location",
+      "dataElement": "Precise Location",
+      "sensitive": false,
+      "sensitivity": "medium",
+      "score": 1,
+      "confidence": "high",
+      "scoringPoints": [],
+      "occurrences": [
+        {
+          "score": 1,
+          "confidence": "high",
+          "scoringPoints": [],
+          "sample": "android.permission.ACCESS_COARSE_LOCATION",
+          "fileName": "AndroidManifest.xml",
+          "language": "app-permissions",
+          "excerpt": "  <uses-permission android:name=\"android.permission.GET_TASKS\"/>\n\n  <!-- Allows location to be tracked. -->\n  <uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>\n  <uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>\n\n  <application\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 33,
+              "endIndex": 74
+            }
+          ],
+          "startLocationLine": 38,
+          "authorEmail": null
+        },
+        {
+          "score": 1,
+          "confidence": "high",
+          "scoringPoints": [],
+          "sample": "android.permission.ACCESS_FINE_LOCATION",
+          "fileName": "AndroidManifest.xml",
+          "language": "app-permissions",
+          "excerpt": "\n  <!-- Allows location to be tracked. -->\n  <uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>\n  <uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>\n\n  <application\n      android:allowBackup=\"true\"\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 33,
+              "endIndex": 72
+            }
+          ],
+          "startLocationLine": 39,
+          "authorEmail": null
+        }
+      ]
+    }
+  ],
+  "piiList": [
+    {
+      "category": "Personal Identification",
+      "element": "Last Name",
+      "dataSafetyElement": "Name",
+      "dataSafetyCategory": "Personal info",
+      "sensitive": false,
+      "sensitivity": "low",
+      "score": 1.5,
+      "confidence": "high",
+      "scoringPoints": [
+        "high confidence",
+        "Positive Word Matched",
+        "Variable Regex Matched",
+        "CaseDependant Matched"
+      ],
+      "occurrences": [
+        {
+          "score": 1.5,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "Positive Word Matched",
+            "Variable Regex Matched",
+            "CaseDependant Matched"
+          ],
+          "sample": "lastName",
+          "fileName": "lib/screens/complete_profile/components/complete_profile_form.dart",
+          "language": "dart",
+          "excerpt": "  final _formKey = GlobalKey<FormState>();\n  final List<String> errors = [];\n  String firstName;\n  String lastName;\n  String phoneNumber;\n  String address;\n\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 9,
+              "endIndex": 17
+            }
+          ],
+          "startLocationLine": 19,
+          "authorEmail": null
+        },
+        {
+          "score": 1.3,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "Positive Word Matched",
+            "CaseDependant Matched"
+          ],
+          "sample": "last_name",
+          "fileName": "apis/views/user/account.jade",
+          "language": "jade",
+          "excerpt": "\t\t\t\t\t\t.form-group.clearfix\n\t\t\t\t\t\t\tlabel.col-md-4.control-label.text-right Last Name:\n\t\t\t\t\t\t\t.col-md-6\n\t\t\t\t\t\t\t\tinput.form-control(type='last_name', name='last_name', value='#{user.last_name}')\n\t\t\t\t\t\t\n\t\t\t\t\t\t.form-group.clearfix\n\t\t\t\t\t\t\tlabel.col-md-4.control-label.text-right Phone Number:\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 33,
+              "endIndex": 42
+            },
+            {
+              "lineNumber": 3,
+              "startIndex": 51,
+              "endIndex": 60
+            },
+            {
+              "lineNumber": 3,
+              "startIndex": 77,
+              "endIndex": 86
+            }
+          ],
+          "startLocationLine": 42,
+          "authorEmail": null
+        }
+      ]
+    },
+    {
+      "category": "Personal Identification",
+      "element": "First Name",
+      "dataSafetyElement": "Name",
+      "dataSafetyCategory": "Personal info",
+      "sensitive": false,
+      "sensitivity": "low",
+      "score": 1.5,
+      "confidence": "high",
+      "scoringPoints": [
+        "high confidence",
+        "Positive Word Matched",
+        "Variable Regex Matched",
+        "CaseDependant Matched"
+      ],
+      "occurrences": [
+        {
+          "score": 1.5,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "Positive Word Matched",
+            "Variable Regex Matched",
+            "CaseDependant Matched"
+          ],
+          "sample": "firstName",
+          "fileName": "lib/screens/complete_profile/components/complete_profile_form.dart",
+          "language": "dart",
+          "excerpt": "class _CompleteProfileFormState extends State<CompleteProfileForm> {\n  final _formKey = GlobalKey<FormState>();\n  final List<String> errors = [];\n  String firstName;\n  String lastName;\n  String phoneNumber;\n  String address;\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 9,
+              "endIndex": 18
+            }
+          ],
+          "startLocationLine": 18,
+          "authorEmail": null
+        },
+        {
+          "score": 1.3,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "Positive Word Matched",
+            "CaseDependant Matched"
+          ],
+          "sample": "first_name",
+          "fileName": "apis/views/user/account.jade",
+          "language": "jade",
+          "excerpt": "\t\t\t\t\t\t.form-group.clearfix\n\t\t\t\t\t\t\tlabel.col-md-4.control-label.text-right First Name:\n\t\t\t\t\t\t\t.col-md-6\n\t\t\t\t\t\t\t\tinput.form-control(type='first_name', name='first_name', value='#{user.first_name}')\n\t\t\t\t\t\t\n\t\t\t\t\t\t.form-group.clearfix\n\t\t\t\t\t\t\tlabel.col-md-4.control-label.text-right Last Name:\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 33,
+              "endIndex": 43
+            },
+            {
+              "lineNumber": 3,
+              "startIndex": 52,
+              "endIndex": 62
+            },
+            {
+              "lineNumber": 3,
+              "startIndex": 79,
+              "endIndex": 89
+            }
+          ],
+          "startLocationLine": 37,
+          "authorEmail": null
+        }
+      ]
+    },
+    {
+      "category": "Contact Data",
+      "element": "Email Address",
+      "dataSafetyElement": "Email address",
+      "dataSafetyCategory": "Personal info",
+      "sensitive": false,
+      "sensitivity": "medium",
+      "score": 1.3,
+      "confidence": "high",
+      "scoringPoints": [
+        "high confidence",
+        "Positive Word Matched",
+        "CaseDependant Matched"
+      ],
+      "occurrences": [
+        {
+          "score": 1.3,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "Positive Word Matched",
+            "CaseDependant Matched"
+          ],
+          "sample": "Email",
+          "fileName": "apis/views/user/register.jade",
+          "language": "jade",
+          "excerpt": "\t\t\t\t\t.panel-body\n\t\t\t\t\t\t.form-group.clearfix\n\t\t\t\t\t\t\tlabel.col-md-4.control-label.text-right\n\t\t\t\t\t\t\t\t| Email\n\t\t\t\t\t\t\t\tspan.text-red *\n\t\t\t\t\t\t\t\t\t| :\n\t\t\t\t\t\t\t.col-md-6\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 10,
+              "endIndex": 15
+            }
+          ],
+          "startLocationLine": 13,
+          "authorEmail": null
+        },
+        {
+          "score": 1.3,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "Positive Word Matched",
+            "CaseDependant Matched"
+          ],
+          "sample": "Email",
+          "fileName": "apis/views/user/account.jade",
+          "language": "jade",
+          "excerpt": "\t\t\t\t\t.panel-body\n\t\t\t\t\t\t.form-group.clearfix\n\t\t\t\t\t\t\tlabel.col-md-4.control-label.text-right\n\t\t\t\t\t\t\t\t| Email\n\t\t\t\t\t\t\t\tspan.text-red\n\t\t\t\t\t\t\t\t\t| :\n\t\t\t\t\t\t\t.col-md-6\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 10,
+              "endIndex": 15
+            }
+          ],
+          "startLocationLine": 13,
+          "authorEmail": null
+        },
+        {
+          "score": 1.0,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "Variable Regex Matched",
+            "CaseDependant Matched"
+          ],
+          "sample": "email",
+          "fileName": "lib/constants.dart",
+          "language": "dart",
+          "excerpt": "// Form Error\nfinal RegExp emailValidatorRegExp =\n    RegExp(r\"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\\.[a-zA-Z]+\");\nconst String kEmailNullError = \"Please Enter your email\";\nconst String kInvalidEmailError = \"Please Enter Valid Email\";\nconst String kPassNullError = \"Please Enter your password\";\nconst String kShortPassError = \"Password is too short\";\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 1,
+              "startIndex": 13,
+              "endIndex": 18
+            },
+            {
+              "lineNumber": 3,
+              "startIndex": 50,
+              "endIndex": 55
+            }
+          ],
+          "startLocationLine": 28,
+          "authorEmail": null
+        },
+        {
+          "score": 1.0,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "Variable Regex Matched",
+            "CaseDependant Matched"
+          ],
+          "sample": "Email",
+          "fileName": "lib/constants.dart",
+          "language": "dart",
+          "excerpt": "final RegExp emailValidatorRegExp =\n    RegExp(r\"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\\.[a-zA-Z]+\");\nconst String kEmailNullError = \"Please Enter your email\";\nconst String kInvalidEmailError = \"Please Enter Valid Email\";\nconst String kPassNullError = \"Please Enter your password\";\nconst String kShortPassError = \"Password is too short\";\nconst String kMatchPassError = \"Passwords don't match\";\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 2,
+              "startIndex": 14,
+              "endIndex": 19
+            },
+            {
+              "lineNumber": 3,
+              "startIndex": 21,
+              "endIndex": 26
+            },
+            {
+              "lineNumber": 3,
+              "startIndex": 54,
+              "endIndex": 59
+            }
+          ],
+          "startLocationLine": 29,
+          "authorEmail": null
+        },
+        {
+          "score": 1.0,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "Positive Word Matched"
+          ],
+          "sample": "email",
+          "fileName": "apis/views/user/login.jade",
+          "language": "jade",
+          "excerpt": "\t\t\t\t\t\tif message != ''\n\t\t\t\t\t\t\tp.bg-danger.p-d #{message}\n\t\t\t\t\t\t.form-group.clearfix\n\t\t\t\t\t\t\tlabel.col-md-4.control-label.text-right(for='email') Email:\n\t\t\t\t\t\t\t.col-md-6\n\t\t\t\t\t\t\t\tinput.form-control(name='email', value=\"\", type='text')\n\t\t\t\t\t\t.form-group.clearfix\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 52,
+              "endIndex": 57
+            },
+            {
+              "lineNumber": 5,
+              "startIndex": 33,
+              "endIndex": 38
+            }
+          ],
+          "startLocationLine": 13,
+          "authorEmail": null
+        }
+      ]
+    },
+    {
+      "category": "Account Data",
+      "element": "Account Password",
+      "dataSafetyElement": "",
+      "dataSafetyCategory": "",
+      "sensitive": false,
+      "sensitivity": "high",
+      "score": 1.3,
+      "confidence": "high",
+      "scoringPoints": [
+        "high confidence",
+        "Positive Word Matched",
+        "CaseDependant Matched"
+      ],
+      "occurrences": [
+        {
+          "score": 1.3,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "Positive Word Matched",
+            "CaseDependant Matched"
+          ],
+          "sample": "Password",
+          "fileName": "apis/views/user/register.jade",
+          "language": "jade",
+          "excerpt": "\t\t\t\t\t\t\t\tinput.form-control(type=\"text\", name=\"email\", value=\"\")\n\t\t\t\t\t\t.form-group.clearfix\n\t\t\t\t\t\t\tlabel.col-md-4.control-label.text-right\n\t\t\t\t\t\t\t\t| Password\n\t\t\t\t\t\t\t\tspan.text-red *\n\t\t\t\t\t\t\t\t\t| :\n\t\t\t\t\t\t\t.col-md-6\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 10,
+              "endIndex": 18
+            }
+          ],
+          "startLocationLine": 20,
+          "authorEmail": null
+        },
+        {
+          "score": 1.0,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "Positive Word Matched"
+          ],
+          "sample": "password",
+          "fileName": "apis/views/user/account.jade",
+          "language": "jade",
+          "excerpt": "\t\t\t\t\t\t.form-group.clearfix\n\t\t\t\t\t\t\tlabel.col-md-4.control-label.text-right New password:\n\t\t\t\t\t\t\t.col-md-6\n\t\t\t\t\t\t\t\tinput.form-control(type='password', name='password', value='')\n\t\t\t\t\t\t\n\t\t\t\t\t\t.form-group.clearfix\n\t\t\t\t\t\t\tlabel.col-md-4.control-label.text-right Confirm New password:\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 1,
+              "startIndex": 51,
+              "endIndex": 59
+            },
+            {
+              "lineNumber": 3,
+              "startIndex": 33,
+              "endIndex": 41
+            },
+            {
+              "lineNumber": 3,
+              "startIndex": 50,
+              "endIndex": 58
+            },
+            {
+              "lineNumber": 6,
+              "startIndex": 59,
+              "endIndex": 67
+            }
+          ],
+          "startLocationLine": 27,
+          "authorEmail": null
+        },
+        {
+          "score": 1.0,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "Positive Word Matched"
+          ],
+          "sample": "password",
+          "fileName": "apis/views/user/account.jade",
+          "language": "jade",
+          "excerpt": "\t\t\t\t\t\t\t\tinput.form-control(type='password', name='old_password', value='')\n\t\t\t\t\t\t\n\t\t\t\t\t\t.form-group.clearfix\n\t\t\t\t\t\t\tlabel.col-md-4.control-label.text-right New password:\n\t\t\t\t\t\t\t.col-md-6\n\t\t\t\t\t\t\t\tinput.form-control(type='password', name='password', value='')\n\t\t\t\t\t\t\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 0,
+              "startIndex": 33,
+              "endIndex": 41
+            },
+            {
+              "lineNumber": 0,
+              "startIndex": 54,
+              "endIndex": 62
+            },
+            {
+              "lineNumber": 3,
+              "startIndex": 51,
+              "endIndex": 59
+            },
+            {
+              "lineNumber": 5,
+              "startIndex": 33,
+              "endIndex": 41
+            },
+            {
+              "lineNumber": 5,
+              "startIndex": 50,
+              "endIndex": 58
+            }
+          ],
+          "startLocationLine": 25,
+          "authorEmail": null
+        },
+        {
+          "score": 1.0,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "Positive Word Matched"
+          ],
+          "sample": "password",
+          "fileName": "apis/views/user/account.jade",
+          "language": "jade",
+          "excerpt": "\t\t\t\t\t\t.form-group.clearfix\n\t\t\t\t\t\t\tlabel.col-md-4.control-label.text-right Old password:\n\t\t\t\t\t\t\t.col-md-6\n\t\t\t\t\t\t\t\tinput.form-control(type='password', name='old_password', value='')\n\t\t\t\t\t\t\n\t\t\t\t\t\t.form-group.clearfix\n\t\t\t\t\t\t\tlabel.col-md-4.control-label.text-right New password:\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 1,
+              "startIndex": 51,
+              "endIndex": 59
+            },
+            {
+              "lineNumber": 3,
+              "startIndex": 33,
+              "endIndex": 41
+            },
+            {
+              "lineNumber": 3,
+              "startIndex": 54,
+              "endIndex": 62
+            },
+            {
+              "lineNumber": 6,
+              "startIndex": 51,
+              "endIndex": 59
+            }
+          ],
+          "startLocationLine": 22,
+          "authorEmail": null
+        },
+        {
+          "score": 1.0,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "Positive Word Matched"
+          ],
+          "sample": "password",
+          "fileName": "apis/views/user/account.jade",
+          "language": "jade",
+          "excerpt": "\t\t\t\t\t\t\t\tinput.form-control(type='text', name='email', value='#{user.email}', disabled='')\n\t\t\t\t\t\t\n\t\t\t\t\t\t.form-group.clearfix\n\t\t\t\t\t\t\tlabel.col-md-4.control-label.text-right Old password:\n\t\t\t\t\t\t\t.col-md-6\n\t\t\t\t\t\t\t\tinput.form-control(type='password', name='old_password', value='')\n\t\t\t\t\t\t\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 51,
+              "endIndex": 59
+            },
+            {
+              "lineNumber": 5,
+              "startIndex": 33,
+              "endIndex": 41
+            },
+            {
+              "lineNumber": 5,
+              "startIndex": 54,
+              "endIndex": 62
+            }
+          ],
+          "startLocationLine": 20,
+          "authorEmail": null
+        }
+      ]
+    },
+    {
+      "category": "User Content Data",
+      "element": "Ratings",
+      "dataSafetyElement": "Other user-generated content",
+      "dataSafetyCategory": "App activity",
+      "sensitive": false,
+      "sensitivity": "medium",
+      "score": 1.0,
+      "confidence": "high",
+      "scoringPoints": [
+        "high confidence",
+        "Positive Word Matched"
+      ],
+      "occurrences": [
+        {
+          "score": 1.0,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "Positive Word Matched"
+          ],
+          "sample": "product.rating",
+          "fileName": "lib/screens/details/details_screen.dart",
+          "language": "dart",
+          "excerpt": "        ModalRoute.of(context).settings.arguments;\n    return Scaffold(\n      backgroundColor: Color(0xFFF5F6F9),\n      appBar: CustomAppBar(rating: agrs.product.rating),\n      body: Body(product: agrs.product),\n    );\n  }\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 40,
+              "endIndex": 54
+            }
+          ],
+          "startLocationLine": 16,
+          "authorEmail": null
+        },
+        {
+          "score": 0.75,
+          "confidence": "high",
+          "scoringPoints": [
+            "medium confidence",
+            "Positive Word Matched"
+          ],
+          "sample": "rating",
+          "fileName": "lib/models/Product.dart",
+          "language": "dart",
+          "excerpt": "    @required this.id,\n    @required this.images,\n    @required this.colors,\n    this.rating = 0.0,\n    this.isFavourite = false,\n    this.isPopular = false,\n    @required this.title,\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 9,
+              "endIndex": 15
+            }
+          ],
+          "startLocationLine": 15,
+          "authorEmail": null
+        },
+        {
+          "score": 0.75,
+          "confidence": "high",
+          "scoringPoints": [
+            "medium confidence",
+            "Positive Word Matched"
+          ],
+          "sample": "rating",
+          "fileName": "lib/models/Product.dart",
+          "language": "dart",
+          "excerpt": "    title: \"Wireless Controller for PS4\u2122\",\n    price: 64.99,\n    description: description,\n    rating: 4.8,\n    isFavourite: true,\n    isPopular: true,\n  ),\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 4,
+              "endIndex": 10
+            }
+          ],
+          "startLocationLine": 44,
+          "authorEmail": null
+        },
+        {
+          "score": 0.75,
+          "confidence": "high",
+          "scoringPoints": [
+            "medium confidence",
+            "Positive Word Matched"
+          ],
+          "sample": "rating",
+          "fileName": "lib/models/Product.dart",
+          "language": "dart",
+          "excerpt": "    title: \"Nike Sport White - Man Pant\",\n    price: 50.5,\n    description: description,\n    rating: 4.1,\n    isPopular: true,\n  ),\n  Product(\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 4,
+              "endIndex": 10
+            }
+          ],
+          "startLocationLine": 62,
+          "authorEmail": null
+        }
+      ]
+    },
+    {
+      "category": "Personal Identification",
+      "element": "Photograph",
+      "dataSafetyElement": "Photos",
+      "dataSafetyCategory": "Photos or videos",
+      "sensitive": false,
+      "sensitivity": "medium",
+      "score": 1,
+      "confidence": "high",
+      "scoringPoints": [
+        "high confidence",
+        "Function Regex Matched",
+        "CaseDependant Matched"
+      ],
+      "occurrences": [
+        {
+          "score": 1,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "Function Regex Matched",
+            "CaseDependant Matched"
+          ],
+          "sample": "ProfilePic",
+          "fileName": "lib/screens/profile/components/body.dart",
+          "language": "dart",
+          "excerpt": "      padding: EdgeInsets.symmetric(vertical: 20),\n      child: Column(\n        children: [\n          ProfilePic(),\n          SizedBox(height: 20),\n          ProfileMenu(\n            text: \"My Account\",\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 10,
+              "endIndex": 20
+            }
+          ],
+          "startLocationLine": 13,
+          "authorEmail": null
+        },
+        {
+          "score": 1,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "Function Regex Matched",
+            "CaseDependant Matched"
+          ],
+          "sample": "ProfilePic",
+          "fileName": "lib/screens/profile/components/profile_pic.dart",
+          "language": "dart",
+          "excerpt": "import 'package:flutter/material.dart';\nimport 'package:flutter_svg/flutter_svg.dart';\n\nclass ProfilePic extends StatelessWidget {\n  const ProfilePic({\n    Key key,\n  }) : super(key: key);\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 6,
+              "endIndex": 16
+            },
+            {
+              "lineNumber": 4,
+              "startIndex": 8,
+              "endIndex": 18
+            }
+          ],
+          "startLocationLine": 4,
+          "authorEmail": null
+        },
+        {
+          "score": 1,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "Function Regex Matched",
+            "CaseDependant Matched"
+          ],
+          "sample": "ProfilePic",
+          "fileName": "lib/screens/profile/components/profile_pic.dart",
+          "language": "dart",
+          "excerpt": "import 'package:flutter_svg/flutter_svg.dart';\n\nclass ProfilePic extends StatelessWidget {\n  const ProfilePic({\n    Key key,\n  }) : super(key: key);\n\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 2,
+              "startIndex": 6,
+              "endIndex": 16
+            },
+            {
+              "lineNumber": 3,
+              "startIndex": 8,
+              "endIndex": 18
+            }
+          ],
+          "startLocationLine": 5,
+          "authorEmail": null
+        }
+      ],
+      "markedAs": "confirmed"
+    },
+    {
+      "category": "Online Identifiers",
+      "element": "Advertising Identifiers",
+      "dataSafetyElement": "Device or other identifiers",
+      "dataSafetyCategory": "Device or other identifiers",
+      "sensitive": false,
+      "sensitivity": "low",
+      "score": 0.8,
+      "confidence": "high",
+      "scoringPoints": [
+        "high confidence",
+        "CaseDependant Matched"
+      ],
+      "occurrences": [
+        {
+          "score": 0.8,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "CaseDependant Matched"
+          ],
+          "sample": "AdvertisingId",
+          "fileName": "jdata.py",
+          "language": "python",
+          "excerpt": "\n          } catch (IOException e) {\n            // Unrecoverable error connecting to Google Play services (e.g.,\n            // the old version of the service doesn't support getting AdvertisingId).\n\n          } catch (GooglePlayServicesNotAvailableException e) {\n            // Google Play services is not available entirely.\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 70,
+              "endIndex": 83
+            }
+          ],
+          "startLocationLine": 7,
+          "authorEmail": null
+        },
+        {
+          "score": 0.7000000000000001,
+          "confidence": "high",
+          "scoringPoints": [
+            "medium confidence",
+            "Variable Regex Matched",
+            "Getter/Setter Regex Matched",
+            "CaseDependant Matched"
+          ],
+          "sample": "AdvertisingId",
+          "fileName": "jdata.py",
+          "language": "python",
+          "excerpt": "         Info adInfo = null;\n          try {\n            adInfo = AdvertisingIdClient.getAdvertisingIdInfo(getApplicationContext());\n\n          } catch (IOException e) {\n            // Unrecoverable error connecting to Google Play services (e.g.,\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 2,
+              "startIndex": 21,
+              "endIndex": 34
+            },
+            {
+              "lineNumber": 2,
+              "startIndex": 44,
+              "endIndex": 57
+            }
+          ],
+          "startLocationLine": 3,
+          "authorEmail": null
+        }
+      ]
+    },
+    {
+      "category": "Contact Data",
+      "element": "Phone Number",
+      "dataSafetyElement": "Phone number",
+      "dataSafetyCategory": "Personal info",
+      "sensitive": false,
+      "sensitivity": "medium",
+      "score": 0.8,
+      "confidence": "high",
+      "scoringPoints": [
+        "high confidence",
+        "CaseDependant Matched"
+      ],
+      "occurrences": [
+        {
+          "score": 0.8,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "CaseDependant Matched"
+          ],
+          "sample": "phone_number",
+          "fileName": "apis/routes/user.js",
+          "language": "javascript",
+          "excerpt": "\t\t\t\t'password' : md5(req.body.password),\n\t\t\t\t'first_name' : req.body.first_name,\n\t\t\t\t'last_name' : req.body.last_name,\n\t\t\t\t'phone_number' : req.body.phone_number\n\t\t\t\t\n\t\t\t}, function (err, user) {\n\t\t\t\tif (err) {\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 5,
+              "endIndex": 17
+            },
+            {
+              "lineNumber": 3,
+              "startIndex": 30,
+              "endIndex": 42
+            }
+          ],
+          "startLocationLine": 66,
+          "authorEmail": null
+        },
+        {
+          "score": 0.8,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "CaseDependant Matched"
+          ],
+          "sample": "Phone",
+          "fileName": "apis/views/user/account.jade",
+          "language": "jade",
+          "excerpt": "\t\t\t\t\t\t\t\tinput.form-control(type='last_name', name='last_name', value='#{user.last_name}')\n\t\t\t\t\t\t\n\t\t\t\t\t\t.form-group.clearfix\n\t\t\t\t\t\t\tlabel.col-md-4.control-label.text-right Phone Number:\n\t\t\t\t\t\t\t.col-md-6\n\t\t\t\t\t\t\t\tinput.form-control(type='phone_number', name='phone_number', value='#{user.phone_number}')\n\t\t\t\t\t\t\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 47,
+              "endIndex": 52
+            }
+          ],
+          "startLocationLine": 45,
+          "authorEmail": null
+        },
+        {
+          "score": 0.8,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "CaseDependant Matched"
+          ],
+          "sample": "Phone",
+          "fileName": "apis/views/user/register.jade",
+          "language": "jade",
+          "excerpt": "\t\t\t\t\t\t\t.col-md-6\n\t\t\t\t\t\t\t\tinput.form-control(type=\"last_name\", name=\"last_name\", value=\"\")\n\t\t\t\t\t\t.form-group.clearfix\n\t\t\t\t\t\t\tlabel.col-md-4.control-label.text-right Phone Number:\n\t\t\t\t\t\t\t.col-md-6\n\t\t\t\t\t\t\t\tinput.form-control(type=\"phone_number\", name=\"phone_number\", value=\"\")\n\t\t\t\t\t\t.col-md-6.col-md-offset-4\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 47,
+              "endIndex": 52
+            }
+          ],
+          "startLocationLine": 38,
+          "authorEmail": null
+        }
+      ]
+    },
+    {
+      "category": "Audio, Visual & Sensory Data",
+      "element": "IoT or Sensor Data",
+      "dataSafetyElement": "",
+      "dataSafetyCategory": "",
+      "sensitive": false,
+      "sensitivity": "medium",
+      "score": 0.8,
+      "confidence": "high",
+      "scoringPoints": [
+        "high confidence",
+        "CaseDependant Matched"
+      ],
+      "occurrences": [
+        {
+          "score": 0.8,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "CaseDependant Matched"
+          ],
+          "sample": "Accelerometer",
+          "fileName": "android/app/src/profile/analytics.java",
+          "language": "java",
+          "excerpt": "\n    private TiltMazesDBAdapter mDB;\n\n    private final SensorListener mSensorAccelerometer = new SensorListener() {\n\n        public void onSensorChanged(int sensor, float[] values) {\n            if (!mSensorEnabled) return;\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 40,
+              "endIndex": 53
+            }
+          ],
+          "startLocationLine": 84,
+          "authorEmail": null
+        },
+        {
+          "score": 0.8,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "CaseDependant Matched"
+          ],
+          "sample": "Accelerometer",
+          "fileName": "android/app/src/profile/analytics.java",
+          "language": "java",
+          "excerpt": "\n        // Register the sensor listener\n        mSensorManager = (SensorManager) context.getSystemService(Context.SENSOR_SERVICE);\n        mSensorManager.registerListener(mSensorAccelerometer, SensorManager.SENSOR_ACCELEROMETER,\n                SensorManager.SENSOR_DELAY_GAME);\n\n        mMap = new Map(MapDesigns.designList.get(mCurrentMap));\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 47,
+              "endIndex": 60
+            }
+          ],
+          "startLocationLine": 124,
+          "authorEmail": null
+        },
+        {
+          "score": 0.8,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "CaseDependant Matched"
+          ],
+          "sample": "ACCELEROMETER",
+          "fileName": "android/app/src/profile/analytics.java",
+          "language": "java",
+          "excerpt": "\n        // Register the sensor listener\n        mSensorManager = (SensorManager) context.getSystemService(Context.SENSOR_SERVICE);\n        mSensorManager.registerListener(mSensorAccelerometer, SensorManager.SENSOR_ACCELEROMETER,\n                SensorManager.SENSOR_DELAY_GAME);\n\n        mMap = new Map(MapDesigns.designList.get(mCurrentMap));\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 83,
+              "endIndex": 96
+            }
+          ],
+          "startLocationLine": 124,
+          "authorEmail": null
+        },
+        {
+          "score": 0.8,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "CaseDependant Matched"
+          ],
+          "sample": "Accelerometer",
+          "fileName": "android/app/src/profile/analytics.java",
+          "language": "java",
+          "excerpt": "    }\n\n    public void registerListener() {\n        mSensorManager.registerListener(mSensorAccelerometer, SensorManager.SENSOR_ACCELEROMETER,\n                SensorManager.SENSOR_DELAY_GAME);\n    }\n\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 47,
+              "endIndex": 60
+            }
+          ],
+          "startLocationLine": 302,
+          "authorEmail": null
+        },
+        {
+          "score": 0.8,
+          "confidence": "high",
+          "scoringPoints": [
+            "high confidence",
+            "CaseDependant Matched"
+          ],
+          "sample": "ACCELEROMETER",
+          "fileName": "android/app/src/profile/analytics.java",
+          "language": "java",
+          "excerpt": "    }\n\n    public void registerListener() {\n        mSensorManager.registerListener(mSensorAccelerometer, SensorManager.SENSOR_ACCELEROMETER,\n                SensorManager.SENSOR_DELAY_GAME);\n    }\n\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 83,
+              "endIndex": 96
+            }
+          ],
+          "startLocationLine": 302,
+          "authorEmail": null
+        }
+      ]
+    },
+    {
+      "category": "Online Identifiers",
+      "element": "Cookies",
+      "dataSafetyElement": "Device or other identifiers",
+      "dataSafetyCategory": "Device or other identifiers",
+      "sensitive": false,
+      "sensitivity": "medium",
+      "score": 0.8,
+      "confidence": "high",
+      "scoringPoints": [
+        "medium confidence",
+        "Positive Word Matched",
+        "CaseDependant Matched"
+      ],
+      "occurrences": [
+        {
+          "score": 0.8,
+          "confidence": "high",
+          "scoringPoints": [
+            "medium confidence",
+            "Positive Word Matched",
+            "CaseDependant Matched"
+          ],
+          "sample": "cookie",
+          "fileName": "apis/app.js",
+          "language": "app-permissions",
+          "excerpt": "app.use(logger('dev'));\napp.use(bodyParser.json());\napp.use(bodyParser.urlencoded({ extended: false }));\napp.use(cookieParser());\napp.use(express.static(path.join(__dirname, 'public')));\napp.use(flash());\napp.use(session({\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 8,
+              "endIndex": 14
+            }
+          ],
+          "startLocationLine": 52,
+          "authorEmail": null
+        }
+      ]
+    },
+    {
+      "category": "Location Data",
+      "element": "Precise Location",
+      "dataSafetyElement": "Precise location",
+      "dataSafetyCategory": "Location",
+      "sensitive": false,
+      "sensitivity": "high",
+      "score": 0.5,
+      "confidence": "low",
+      "scoringPoints": [
+        "high confidence"
+      ],
+      "occurrences": [
+        {
+          "score": 1,
+          "confidence": "high",
+          "scoringPoints": [],
+          "sample": "android.permission.ACCESS_COARSE_LOCATION",
+          "fileName": "AndroidManifest.xml",
+          "language": "app-permissions",
+          "excerpt": "  <uses-permission android:name=\"android.permission.GET_TASKS\"/>\n\n  <!-- Allows location to be tracked. -->\n  <uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>\n  <uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>\n\n  <application\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 33,
+              "endIndex": 74
+            }
+          ],
+          "startLocationLine": 38,
+          "authorEmail": null
+        },
+        {
+          "score": 1,
+          "confidence": "high",
+          "scoringPoints": [],
+          "sample": "android.permission.ACCESS_FINE_LOCATION",
+          "fileName": "AndroidManifest.xml",
+          "language": "app-permissions",
+          "excerpt": "\n  <!-- Allows location to be tracked. -->\n  <uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>\n  <uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>\n\n  <application\n      android:allowBackup=\"true\"\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 33,
+              "endIndex": 72
+            }
+          ],
+          "startLocationLine": 39,
+          "authorEmail": null
+        },
+        {
+          "score": 0.5,
+          "confidence": "low",
+          "scoringPoints": [
+            "high confidence"
+          ],
+          "sample": "latitude",
+          "fileName": "apis/app.js",
+          "language": "app-permissions",
+          "excerpt": "\napp.use(function(req, res, next){\n    req.db = db; /* Make our db accessible to our router */\n\tconst { latitude, longitude } = req.user;\n\tres.location.user = { latitude, longitude }; /* Make our location object accessible in all our templates. */\n\tnext();\n});\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 9,
+              "endIndex": 17
+            },
+            {
+              "lineNumber": 4,
+              "startIndex": 23,
+              "endIndex": 31
+            }
+          ],
+          "startLocationLine": 100,
+          "authorEmail": null
+        },
+        {
+          "score": 0.5,
+          "confidence": "low",
+          "scoringPoints": [
+            "high confidence"
+          ],
+          "sample": "longitude",
+          "fileName": "apis/app.js",
+          "language": "app-permissions",
+          "excerpt": "\napp.use(function(req, res, next){\n    req.db = db; /* Make our db accessible to our router */\n\tconst { latitude, longitude } = req.user;\n\tres.location.user = { latitude, longitude }; /* Make our location object accessible in all our templates. */\n\tnext();\n});\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 19,
+              "endIndex": 28
+            },
+            {
+              "lineNumber": 4,
+              "startIndex": 33,
+              "endIndex": 42
+            }
+          ],
+          "startLocationLine": 100,
+          "authorEmail": null
+        },
+        {
+          "score": 0.5,
+          "confidence": "low",
+          "scoringPoints": [
+            "high confidence"
+          ],
+          "sample": "latitude",
+          "fileName": "apis/app.js",
+          "language": "app-permissions",
+          "excerpt": "app.use(function(req, res, next){\n    req.db = db; /* Make our db accessible to our router */\n\tconst { latitude, longitude } = req.user;\n\tres.location.user = { latitude, longitude }; /* Make our location object accessible in all our templates. */\n\tnext();\n});\n\n",
+          "isCorrect": null,
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 2,
+              "startIndex": 9,
+              "endIndex": 17
+            },
+            {
+              "lineNumber": 3,
+              "startIndex": 23,
+              "endIndex": 31
+            }
+          ],
+          "startLocationLine": 101,
+          "authorEmail": null
+        }
+      ]
+    }
+  ],
+  "vendorList": [
+    {
+      "category": "Integrations",
+      "element": "URL Pattern Discovery",
+      "ruleId": "TP000012",
+      "confidence": "high",
+      "confidenceTypeId": 1,
+      "occurrences": [
+        {
+          "confidence": "high",
+          "sample": "(\"https://www.example.com/privacy\")",
+          "fileName": "android/app/src/profile/payment.java",
+          "language": "java",
+          "excerpt": "                .environment(CONFIG_ENVIRONMENT)\n                .clientId(CONFIG_CLIENT_ID)\n                .merchantName(\"Example Merchant\")\n                .merchantPrivacyPolicyUri(Uri.parse(\"https://www.example.com/privacy\"))\n                .merchantUserAgreementUri(Uri.parse(\"https://www.example.com/legal\"))\n    }\n}\n",
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 51,
+              "endIndex": 86
+            }
+          ],
+          "startLocationLine": 304
+        },
+        {
+          "confidence": "high",
+          "sample": "(\"https://www.example.com/legal\")",
+          "fileName": "android/app/src/profile/payment.java",
+          "language": "java",
+          "excerpt": "                .clientId(CONFIG_CLIENT_ID)\n                .merchantName(\"Example Merchant\")\n                .merchantPrivacyPolicyUri(Uri.parse(\"https://www.example.com/privacy\"))\n                .merchantUserAgreementUri(Uri.parse(\"https://www.example.com/legal\"))\n    }\n}\n",
+          "occurrenceIndexes": [
+            {
+              "lineNumber": 3,
+              "startIndex": 51,
+              "endIndex": 84
+            }
+          ],
+          "startLocationLine": 305
+        }
+      ]
+    }
+  ],
+  "interestsubjectList": [],
+  "created": "2022-02-16 12:35:49.026984",
+  "updated": "2022-02-16 12:36:50.604445"
+}

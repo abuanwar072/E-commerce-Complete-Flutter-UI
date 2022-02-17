@@ -1,0 +1,74 @@
+version: v0.1
+name: playstore-data-safety-report
+projectName: mobile-app-android
+createdAt: '2022-02-15 06:41:50.122344'
+updatedAt: '2022-02-16 12:38:37.247699'
+doesProcessData: true
+doesEncryptDataInTransit: true
+doesAllowDeletionOfData: false
+pii:
+- element: Device or other identifiers
+  category: Device or other identifiers
+  collected: true
+  shared: true
+  processedEphemerally: false
+  required: true
+  collectionPurposes:
+  - App functionality
+  sharingPurposes:
+  - App functionality
+- element: Email address
+  category: Personal info
+  collected: true
+  shared: false
+  processedEphemerally: false
+  required: false
+  collectionPurposes:
+  - Analytics
+  - App functionality
+  sharingPurposes: []
+- element: Name
+  category: Personal info
+  collected: true
+  shared: false
+  processedEphemerally: false
+  required: true
+  collectionPurposes:
+  - Advertising or marketing
+  sharingPurposes: []
+- element: Other user-generated content
+  category: App activity
+  collected: true
+  shared: false
+  processedEphemerally: false
+  required: true
+  collectionPurposes:
+  - App functionality
+  sharingPurposes: []
+- element: Phone number
+  category: Personal info
+  collected: true
+  shared: false
+  processedEphemerally: false
+  required: true
+  collectionPurposes:
+  - Analytics
+  sharingPurposes: []
+- element: Photos
+  category: Photos or videos
+  collected: true
+  shared: false
+  processedEphemerally: false
+  required: true
+  collectionPurposes:
+  - Advertising or marketing
+  sharingPurposes: []
+- element: Precise location
+  category: Location
+  collected: true
+  shared: false
+  processedEphemerally: false
+  required: true
+  collectionPurposes:
+  - Advertising or marketing
+  sharingPurposes: []
