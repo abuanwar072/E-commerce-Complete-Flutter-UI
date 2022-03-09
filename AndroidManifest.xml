@@ -37,6 +37,10 @@
   <!-- Allows location to be tracked. -->
   <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+  
+    <!-- Allows audio to be recorded. -->
+  <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
 
   <application
       android:allowBackup="true"
