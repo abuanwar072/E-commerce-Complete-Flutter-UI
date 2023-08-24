@@ -8,10 +8,10 @@ class AppTheme {
       scaffoldBackgroundColor: Colors.white,
       fontFamily: "Muli",
       appBarTheme: AppBarTheme(
-        color: Colors.white,
-        elevation: 0,
-        iconTheme: IconThemeData(color: Colors.black),
-      ),
+          color: Colors.white,
+          elevation: 0,
+          iconTheme: IconThemeData(color: Colors.black),
+          titleTextStyle: TextStyle(color: Colors.black)),
       textTheme: TextTheme(
         bodyLarge: TextStyle(color: kTextColor),
         bodyMedium: TextStyle(color: kTextColor),
