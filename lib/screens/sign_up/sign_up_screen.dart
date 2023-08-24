@@ -22,7 +22,7 @@ class SignUpScreen extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  SizedBox(height: 16), // 4%
+                  SizedBox(height: 16),
                   Text("Register Account", style: headingStyle),
                   Text(
                     "Complete your details or continue \nwith social media",
