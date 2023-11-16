@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../../size_config.dart';
 
 import '../../../constants.dart';
 
@@ -44,12 +43,12 @@ class _OtpFormState extends State<OtpForm> {
     return Form(
       child: Column(
         children: [
-          SizedBox(height: SizeConfig.screenHeight * 0.15),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.15),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SizedBox(
-                width: getProportionateScreenWidth(60),
+                width: 60,
                 child: TextFormField(
                   autofocus: true,
                   obscureText: true,
@@ -63,7 +62,7 @@ class _OtpFormState extends State<OtpForm> {
                 ),
               ),
               SizedBox(
-                width: getProportionateScreenWidth(60),
+                width: 60,
                 child: TextFormField(
                   focusNode: pin2FocusNode,
                   obscureText: true,
@@ -75,7 +74,7 @@ class _OtpFormState extends State<OtpForm> {
                 ),
               ),
               SizedBox(
-                width: getProportionateScreenWidth(60),
+                width: 60,
                 child: TextFormField(
                   focusNode: pin3FocusNode,
                   obscureText: true,
@@ -87,7 +86,7 @@ class _OtpFormState extends State<OtpForm> {
                 ),
               ),
               SizedBox(
-                width: getProportionateScreenWidth(60),
+                width: 60,
                 child: TextFormField(
                   focusNode: pin4FocusNode,
                   obscureText: true,
@@ -105,7 +104,7 @@ class _OtpFormState extends State<OtpForm> {
               ),
             ],
           ),
-          SizedBox(height: SizeConfig.screenHeight * 0.15),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.15),
           ElevatedButton(
             onPressed: () {},
             child: const Text("Continue"),

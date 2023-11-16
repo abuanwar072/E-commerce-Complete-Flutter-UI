@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
-import '../../size_config.dart';
 import '../sign_in/sign_in_screen.dart';
 import 'components/splash_content.dart';
 
@@ -33,8 +32,6 @@ class _SplashScreenState extends State<SplashScreen> {
   ];
   @override
   Widget build(BuildContext context) {
-    // You have to call it on your starting screen
-    SizeConfig().init(context);
     return Scaffold(
       body: SafeArea(
         child: SizedBox(

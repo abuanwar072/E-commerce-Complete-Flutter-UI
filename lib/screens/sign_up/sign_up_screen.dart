@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../components/socal_card.dart';
 import '../../constants.dart';
-import '../../size_config.dart';
 import 'components/sign_up_form.dart';
 
 class SignUpScreen extends StatelessWidget {
