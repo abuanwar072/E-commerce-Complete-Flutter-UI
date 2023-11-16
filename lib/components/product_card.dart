@@ -4,7 +4,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../constants.dart';
 import '../models/Product.dart';
 import '../screens/details/details_screen.dart';
-import '../size_config.dart';
 
 class ProductCard extends StatelessWidget {
   const ProductCard({
@@ -22,7 +21,7 @@ class ProductCard extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(left: 20),
       child: SizedBox(
-        width: getProportionateScreenWidth(width),
+        width: width,
         child: GestureDetector(
           onTap: () => Navigator.pushNamed(
             context,
@@ -38,7 +37,7 @@ class ProductCard extends StatelessWidget {
                   padding: EdgeInsets.all(20),
                   decoration: BoxDecoration(
                     color: kSecondaryColor.withOpacity(0.1),
-                    borderRadius: BorderRadius.circular(15),
+                    borderRadius: BorderRadius.circular(12),
                   ),
                   child: Hero(
                     tag: product.id.toString(),
@@ -46,10 +45,10 @@ class ProductCard extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 8),
               Text(
                 product.title,
-                style: const TextStyle(color: Colors.black),
+                style: Theme.of(context).textTheme.bodyMedium,
                 maxLines: 2,
               ),
               Row(
@@ -57,8 +56,8 @@ class ProductCard extends StatelessWidget {
                 children: [
                   Text(
                     "\$${product.price}",
-                    style: TextStyle(
-                      fontSize: getProportionateScreenWidth(18),
+                    style: const TextStyle(
+                      fontSize: 14,
                       fontWeight: FontWeight.w600,
                       color: kPrimaryColor,
                     ),
@@ -67,9 +66,9 @@ class ProductCard extends StatelessWidget {
                     borderRadius: BorderRadius.circular(50),
                     onTap: () {},
                     child: Container(
-                      padding: EdgeInsets.all(getProportionateScreenWidth(8)),
-                      height: getProportionateScreenWidth(28),
-                      width: getProportionateScreenWidth(28),
+                      padding: const EdgeInsets.all(6),
+                      height: 24,
+                      width: 24,
                       decoration: BoxDecoration(
                         color: product.isFavourite
                             ? kPrimaryColor.withOpacity(0.15)
@@ -78,9 +77,11 @@ class ProductCard extends StatelessWidget {
                       ),
                       child: SvgPicture.asset(
                         "assets/icons/Heart Icon_2.svg",
-                        color: product.isFavourite
-                            ? const Color(0xFFFF4848)
-                            : const Color(0xFFDBDEE4),
+                        colorFilter: ColorFilter.mode(
+                            product.isFavourite
+                                ? const Color(0xFFFF4848)
+                                : const Color(0xFFDBDEE4),
+                            BlendMode.srcIn),
                       ),
                     ),
                   ),

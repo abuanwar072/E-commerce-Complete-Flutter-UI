@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+
 import '../../components/coustom_bottom_nav_bar.dart';
 import '../../enums.dart';
-
-import 'components/body.dart';
 import 'components/categories.dart';
 import 'components/discount_banner.dart';
 import 'components/home_header.dart';
@@ -15,20 +14,20 @@ class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
               // SizedBox(height: getProportionateScreenHeight(20)),
-              const HomeHeader(),
+              HomeHeader(),
               // SizedBox(height: 10),
-              const DiscountBanner(),
-              const Categories(),
-              const SpecialOffers(),
-              // SizedBox(height: getProportionateScreenWidth(30)),
-              // const PopularProducts(),
-              // SizedBox(height: getProportionateScreenWidth(30)),
+              DiscountBanner(),
+              Categories(),
+              SpecialOffers(),
+              SizedBox(height: 20),
+              PopularProducts(),
+              SizedBox(height: 20),
             ],
           ),
         ),
