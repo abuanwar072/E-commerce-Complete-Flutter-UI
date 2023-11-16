@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/components/default_button.dart';
-import 'package:shop_app/models/Product.dart';
-import 'package:shop_app/size_config.dart';
+import '../../../components/default_button.dart';
+import '../../../models/Product.dart';
+import '../../../size_config.dart';
 
 import 'color_dots.dart';
 import 'product_description.dart';
-import 'top_rounded_container.dart';
 import 'product_images.dart';
+import 'top_rounded_container.dart';
 
 class Body extends StatelessWidget {
   final Product product;

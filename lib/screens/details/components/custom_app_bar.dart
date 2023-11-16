@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:shop_app/constants.dart';
+import '../../../constants.dart';
 
 import '../../../size_config.dart';
 
 class CustomAppBar extends StatelessWidget {
   final double rating;
 
-  CustomAppBar({required this.rating});
+  const CustomAppBar({super.key, required this.rating});
 
-  @override
   // AppBar().preferredSize.height provide us the height that appy on our app bar
   Size get preferredSize => Size.fromHeight(AppBar().preferredSize.height);
 

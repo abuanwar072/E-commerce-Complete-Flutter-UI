@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/models/Cart.dart';
 
 import '../../../constants.dart';
+import '../../../models/Cart.dart';
 import '../../../size_config.dart';
 
 class CartCard extends StatelessWidget {
