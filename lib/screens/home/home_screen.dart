@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../components/coustom_bottom_nav_bar.dart';
-import '../../enums.dart';
 import 'components/categories.dart';
 import 'components/discount_banner.dart';
 import 'components/home_header.dart';
@@ -17,11 +15,10 @@ class HomeScreen extends StatelessWidget {
     return const Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
+          padding: EdgeInsets.symmetric(vertical: 16),
           child: Column(
             children: [
-              // SizedBox(height: getProportionateScreenHeight(20)),
               HomeHeader(),
-              // SizedBox(height: 10),
               DiscountBanner(),
               Categories(),
               SpecialOffers(),
@@ -32,7 +29,6 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.home),
     );
   }
 }
