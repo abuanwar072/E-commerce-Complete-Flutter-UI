@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../../components/custom_surfix_icon.dart';
-import '../../../components/default_button.dart';
 import '../../../components/form_error.dart';
 import '../../../components/no_account_text.dart';
 import '../../../size_config.dart';
@@ -16,7 +15,7 @@ class Body extends StatelessWidget {
       width: double.infinity,
       child: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             children: [
               SizedBox(height: SizeConfig.screenHeight * 0.04),
@@ -100,13 +99,13 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
           SizedBox(height: getProportionateScreenHeight(30)),
           FormError(errors: errors),
           SizedBox(height: SizeConfig.screenHeight * 0.1),
-          DefaultButton(
-            text: "Continue",
-            press: () {
+          ElevatedButton(
+            onPressed: () {
               if (_formKey.currentState!.validate()) {
                 // Do what you want to do
               }
             },
+            child: const Text("Continue"),
           ),
           SizedBox(height: SizeConfig.screenHeight * 0.1),
           const NoAccountText(),

@@ -5,7 +5,6 @@ import '../../../helper/keyboard.dart';
 import '../../forgot_password/forgot_password_screen.dart';
 import '../../login_success/login_success_screen.dart';
 
-import '../../../components/default_button.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
 
@@ -74,9 +73,8 @@ class _SignFormState extends State<SignForm> {
           ),
           FormError(errors: errors),
           SizedBox(height: getProportionateScreenHeight(20)),
-          DefaultButton(
-            text: "Continue",
-            press: () {
+          ElevatedButton(
+            onPressed: () {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
                 // if all are valid then go to success screen
@@ -84,6 +82,7 @@ class _SignFormState extends State<SignForm> {
                 Navigator.pushNamed(context, LoginSuccessScreen.routeName);
               }
             },
+            child: const Text("Continue"),
           ),
         ],
       ),

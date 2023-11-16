@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import '../../../components/custom_surfix_icon.dart';
-import '../../../components/default_button.dart';
 import '../../../components/form_error.dart';
 import '../../complete_profile/complete_profile_screen.dart';
 
 import '../../../constants.dart';
 import '../../../size_config.dart';
-
 
 class SignUpForm extends StatefulWidget {
   const SignUpForm({super.key});
@@ -52,15 +50,15 @@ class _SignUpFormState extends State<SignUpForm> {
           buildConformPassFormField(),
           FormError(errors: errors),
           SizedBox(height: getProportionateScreenHeight(40)),
-          DefaultButton(
-            text: "Continue",
-            press: () {
+          ElevatedButton(
+            onPressed: () {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
                 // if all are valid then go to success screen
                 Navigator.pushNamed(context, CompleteProfileScreen.routeName);
               }
             },
+            child: const Text("Continue"),
           ),
         ],
       ),

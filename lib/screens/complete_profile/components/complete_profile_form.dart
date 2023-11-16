@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../components/custom_surfix_icon.dart';
-import '../../../components/default_button.dart';
+
 import '../../../components/form_error.dart';
 import '../../otp/otp_screen.dart';
 
@@ -53,13 +53,13 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
           buildAddressFormField(),
           FormError(errors: errors),
           SizedBox(height: getProportionateScreenHeight(40)),
-          DefaultButton(
-            text: "continue",
-            press: () {
+          ElevatedButton(
+            onPressed: () {
               if (_formKey.currentState!.validate()) {
                 Navigator.pushNamed(context, OtpScreen.routeName);
               }
             },
+            child: Text("Continue"),
           ),
         ],
       ),

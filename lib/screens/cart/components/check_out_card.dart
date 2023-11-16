@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-
-import '../../../components/default_button.dart';
 import '../../../constants.dart';
-import '../../../size_config.dart';
 
 class CheckoutCard extends StatelessWidget {
   const CheckoutCard({
@@ -15,8 +12,8 @@ class CheckoutCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(
-        vertical: getProportionateScreenWidth(15),
-        horizontal: getProportionateScreenWidth(30),
+        vertical: 16,
+        horizontal: 20,
       ),
       // height: 174,
       decoration: BoxDecoration(
@@ -42,8 +39,8 @@ class CheckoutCard extends StatelessWidget {
               children: [
                 Container(
                   padding: const EdgeInsets.all(10),
-                  height: getProportionateScreenWidth(40),
-                  width: getProportionateScreenWidth(40),
+                  height: 40,
+                  width: 40,
                   decoration: BoxDecoration(
                     color: const Color(0xFFF5F6F9),
                     borderRadius: BorderRadius.circular(10),
@@ -52,7 +49,7 @@ class CheckoutCard extends StatelessWidget {
                 ),
                 const Spacer(),
                 const Text("Add voucher code"),
-                const SizedBox(width: 10),
+                const SizedBox(width: 8),
                 const Icon(
                   Icons.arrow_forward_ios,
                   size: 12,
@@ -60,26 +57,26 @@ class CheckoutCard extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(height: getProportionateScreenHeight(20)),
+            SizedBox(height: 16),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text.rich(
-                  TextSpan(
-                    text: "Total:\n",
-                    children: [
-                      TextSpan(
-                        text: "\$337.15",
-                        style: TextStyle(fontSize: 16, color: Colors.black),
-                      ),
-                    ],
+                Expanded(
+                  child: const Text.rich(
+                    TextSpan(
+                      text: "Total:\n",
+                      children: [
+                        TextSpan(
+                          text: "\$337.15",
+                          style: TextStyle(fontSize: 16, color: Colors.black),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-                SizedBox(
-                  width: getProportionateScreenWidth(190),
-                  child: DefaultButton(
-                    text: "Check Out",
-                    press: () {},
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Text("Check Out"),
                   ),
                 ),
               ],

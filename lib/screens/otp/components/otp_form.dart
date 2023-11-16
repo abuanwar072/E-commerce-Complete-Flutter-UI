@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../../components/default_button.dart';
 import '../../../size_config.dart';
 
 import '../../../constants.dart';
@@ -107,10 +106,10 @@ class _OtpFormState extends State<OtpForm> {
             ],
           ),
           SizedBox(height: SizeConfig.screenHeight * 0.15),
-          DefaultButton(
-            text: "Continue",
-            press: () {},
-          )
+          ElevatedButton(
+            onPressed: () {},
+            child: const Text("Continue"),
+          ),
         ],
       ),
     );

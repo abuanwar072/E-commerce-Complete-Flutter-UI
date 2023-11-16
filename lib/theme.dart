@@ -25,6 +25,16 @@ class AppTheme {
         border: outlineInputBorder,
       ),
       visualDensity: VisualDensity.adaptivePlatformDensity,
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          elevation: 0,
+          backgroundColor: kPrimaryColor,
+          minimumSize: const Size(100, 48),
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(16)),
+          ),
+        ),
+      ),
     );
   }
 }

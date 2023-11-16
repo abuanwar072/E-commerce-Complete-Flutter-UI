@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shop_app/screens/cart/cart_screen.dart';
 
-import '../../components/default_button.dart';
 import '../../models/Product.dart';
 import 'components/color_dots.dart';
 import 'components/product_description.dart';
@@ -28,7 +28,9 @@ class DetailsScreen extends StatelessWidget {
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             style: ElevatedButton.styleFrom(
               shape: const CircleBorder(),
               padding: EdgeInsets.zero,
@@ -101,9 +103,11 @@ class DetailsScreen extends StatelessWidget {
         child: SafeArea(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-            child: DefaultButton(
-              text: "Add To Cart",
-              press: () {},
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, CartScreen.routeName);
+              },
+              child: Text("Add To Cart"),
             ),
           ),
         ),
