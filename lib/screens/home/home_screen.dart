@@ -22,10 +22,10 @@ class HomeScreen extends StatelessWidget {
             children: [
               // SizedBox(height: getProportionateScreenHeight(20)),
               const HomeHeader(),
-              // SizedBox(height: getProportionateScreenWidth(10)),
+              // SizedBox(height: 10),
               const DiscountBanner(),
-              // const Categories(),
-              // const SpecialOffers(),
+              const Categories(),
+              const SpecialOffers(),
               // SizedBox(height: getProportionateScreenWidth(30)),
               // const PopularProducts(),
               // SizedBox(height: getProportionateScreenWidth(30)),

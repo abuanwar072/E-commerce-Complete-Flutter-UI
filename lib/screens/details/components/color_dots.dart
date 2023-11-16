@@ -18,8 +18,7 @@ class ColorDots extends StatelessWidget {
     // Now this is fixed and only for demo
     int selectedColor = 3;
     return Padding(
-      padding:
-          EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
+      padding: EdgeInsets.symmetric(horizontal: 20),
       child: Row(
         children: [
           ...List.generate(
@@ -34,7 +33,7 @@ class ColorDots extends StatelessWidget {
             icon: Icons.remove,
             press: () {},
           ),
-          SizedBox(width: getProportionateScreenWidth(20)),
+          SizedBox(width: 20),
           RoundedIconBtn(
             icon: Icons.add,
             showShadow: true,

@@ -16,8 +16,7 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding:
-            EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
+        padding: EdgeInsets.symmetric(horizontal: 20),
         child: Row(
           children: [
             SizedBox(
@@ -25,7 +24,8 @@ class CustomAppBar extends StatelessWidget {
               width: getProportionateScreenWidth(40),
               child: TextButton(
                 style: TextButton.styleFrom(
-                  foregroundColor: kPrimaryColor, shape: RoundedRectangleBorder(
+                  foregroundColor: kPrimaryColor,
+                  shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(60),
                   ),
                   backgroundColor: Colors.white,

@@ -21,8 +21,7 @@ class ProductDescription extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding:
-              EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
+          padding: EdgeInsets.symmetric(horizontal: 20),
           child: Text(
             product.title,
             style: Theme.of(context).textTheme.titleLarge,
@@ -53,7 +52,7 @@ class ProductDescription extends StatelessWidget {
         ),
         Padding(
           padding: EdgeInsets.only(
-            left: getProportionateScreenWidth(20),
+            left: 20,
             right: getProportionateScreenWidth(64),
           ),
           child: Text(
@@ -63,7 +62,7 @@ class ProductDescription extends StatelessWidget {
         ),
         Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: getProportionateScreenWidth(20),
+            horizontal: 20,
             vertical: 10,
           ),
           child: GestureDetector(
