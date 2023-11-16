@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../components/product_card.dart';
 import '../../../models/Product.dart';
+import '../../details/details_screen.dart';
 import 'section_title.dart';
 
 class PopularProducts extends StatelessWidget {
@@ -23,7 +24,18 @@ class PopularProducts extends StatelessWidget {
                 demoProducts.length,
                 (index) {
                   if (demoProducts[index].isPopular) {
-                    return ProductCard(product: demoProducts[index]);
+                    return Padding(
+                      padding: const EdgeInsets.only(left: 20),
+                      child: ProductCard(
+                        product: demoProducts[index],
+                        onPress: () => Navigator.pushNamed(
+                          context,
+                          DetailsScreen.routeName,
+                          arguments: ProductDetailsArguments(
+                              product: demoProducts[index]),
+                        ),
+                      ),
+                    );
                   }
 
                   return const SizedBox
