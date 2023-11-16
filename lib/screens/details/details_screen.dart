@@ -3,7 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../components/default_button.dart';
 import '../../models/Product.dart';
-import '../../size_config.dart';
 import 'components/color_dots.dart';
 import 'components/product_description.dart';
 import 'components/product_images.dart';
@@ -76,41 +75,38 @@ class DetailsScreen extends StatelessWidget {
       body: ListView(
         children: [
           ProductImages(product: product),
-          // TopRoundedContainer(
-          //   color: Colors.white,
-          //   child: Column(
-          //     children: [
-          //       ProductDescription(
-          //         product: product,
-          //         pressOnSeeMore: () {},
-          //       ),
-          //       TopRoundedContainer(
-          //         color: const Color(0xFFF6F7F9),
-          //         child: Column(
-          //           children: [
-          //             ColorDots(product: product),
-          //             TopRoundedContainer(
-          //               color: Colors.white,
-          //               child: Padding(
-          //                 padding: EdgeInsets.only(
-          //                   left: SizeConfig.screenWidth * 0.15,
-          //                   right: SizeConfig.screenWidth * 0.15,
-          //                   bottom: getProportionateScreenWidth(40),
-          //                   top: getProportionateScreenWidth(15),
-          //                 ),
-          //                 child: DefaultButton(
-          //                   text: "Add To Cart",
-          //                   press: () {},
-          //                 ),
-          //               ),
-          //             ),
-          //           ],
-          //         ),
-          //       ),
-          //     ],
-          //   ),
-          // ),
+          TopRoundedContainer(
+            color: Colors.white,
+            child: Column(
+              children: [
+                ProductDescription(
+                  product: product,
+                  pressOnSeeMore: () {},
+                ),
+                TopRoundedContainer(
+                  color: const Color(0xFFF6F7F9),
+                  child: Column(
+                    children: [
+                      ColorDots(product: product),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
+      ),
+      bottomNavigationBar: TopRoundedContainer(
+        color: Colors.white,
+        child: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+            child: DefaultButton(
+              text: "Add To Cart",
+              press: () {},
+            ),
+          ),
+        ),
       ),
     );
   }

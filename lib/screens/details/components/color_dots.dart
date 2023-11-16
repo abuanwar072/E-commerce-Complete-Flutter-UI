@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../../components/rounded_icon_btn.dart';
-import '../../../models/Product.dart';
 
+import '../../../components/rounded_icon_btn.dart';
 import '../../../constants.dart';
-import '../../../size_config.dart';
+import '../../../models/Product.dart';
 
 class ColorDots extends StatelessWidget {
   const ColorDots({
@@ -18,7 +17,7 @@ class ColorDots extends StatelessWidget {
     // Now this is fixed and only for demo
     int selectedColor = 3;
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Row(
         children: [
           ...List.generate(
@@ -33,7 +32,7 @@ class ColorDots extends StatelessWidget {
             icon: Icons.remove,
             press: () {},
           ),
-          SizedBox(width: 20),
+          const SizedBox(width: 20),
           RoundedIconBtn(
             icon: Icons.add,
             showShadow: true,
@@ -59,9 +58,9 @@ class ColorDot extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(right: 2),
-      padding: EdgeInsets.all(getProportionateScreenWidth(8)),
-      height: getProportionateScreenWidth(40),
-      width: getProportionateScreenWidth(40),
+      padding: const EdgeInsets.all(8),
+      height: 40,
+      width: 40,
       decoration: BoxDecoration(
         color: Colors.transparent,
         border:

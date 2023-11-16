@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../../../models/Product.dart';
 
 import '../../../constants.dart';
-import '../../../size_config.dart';
+import '../../../models/Product.dart';
 
 class ProductDescription extends StatelessWidget {
   const ProductDescription({
@@ -21,7 +20,7 @@ class ProductDescription extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Text(
             product.title,
             style: Theme.of(context).textTheme.titleLarge,
@@ -30,8 +29,8 @@ class ProductDescription extends StatelessWidget {
         Align(
           alignment: Alignment.centerRight,
           child: Container(
-            padding: EdgeInsets.all(getProportionateScreenWidth(15)),
-            width: getProportionateScreenWidth(64),
+            padding: const EdgeInsets.all(16),
+            width: 48,
             decoration: BoxDecoration(
               color: product.isFavourite
                   ? const Color(0xFFFFE6E6)
@@ -43,17 +42,19 @@ class ProductDescription extends StatelessWidget {
             ),
             child: SvgPicture.asset(
               "assets/icons/Heart Icon_2.svg",
-              color: product.isFavourite
-                  ? const Color(0xFFFF4848)
-                  : const Color(0xFFDBDEE4),
-              height: getProportionateScreenWidth(16),
+              colorFilter: ColorFilter.mode(
+                  product.isFavourite
+                      ? const Color(0xFFFF4848)
+                      : const Color(0xFFDBDEE4),
+                  BlendMode.srcIn),
+              height: 16,
             ),
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(
+          padding: const EdgeInsets.only(
             left: 20,
-            right: getProportionateScreenWidth(64),
+            right: 64,
           ),
           child: Text(
             product.description,
@@ -61,9 +62,9 @@ class ProductDescription extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
             horizontal: 20,
-            vertical: 10,
+            vertical: 12,
           ),
           child: GestureDetector(
             onTap: () {},
