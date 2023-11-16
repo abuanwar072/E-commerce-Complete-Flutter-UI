@@ -3,7 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../constants.dart';
 import '../models/Product.dart';
-import '../screens/details/details_screen.dart';
 
 class ProductCard extends StatelessWidget {
   const ProductCard({
@@ -30,15 +29,12 @@ class ProductCard extends StatelessWidget {
             AspectRatio(
               aspectRatio: 1.02,
               child: Container(
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   color: kSecondaryColor.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(12),
                 ),
-                child: Hero(
-                  tag: product.id.toString(),
-                  child: Image.asset(product.images[0]),
-                ),
+                child: Image.asset(product.images[0]),
               ),
             ),
             const SizedBox(height: 8),
