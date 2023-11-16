@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
+
 import '../../../components/custom_surfix_icon.dart';
 import '../../../components/form_error.dart';
+import '../../../constants.dart';
 import '../../../helper/keyboard.dart';
 import '../../forgot_password/forgot_password_screen.dart';
 import '../../login_success/login_success_screen.dart';
-
-import '../../../constants.dart';
-import '../../../size_config.dart';
 
 class SignForm extends StatefulWidget {
   const SignForm({super.key});
@@ -44,10 +43,68 @@ class _SignFormState extends State<SignForm> {
       key: _formKey,
       child: Column(
         children: [
-          buildEmailFormField(),
-          SizedBox(height: getProportionateScreenHeight(30)),
-          buildPasswordFormField(),
-          SizedBox(height: getProportionateScreenHeight(30)),
+          TextFormField(
+            keyboardType: TextInputType.emailAddress,
+            onSaved: (newValue) => email = newValue,
+            onChanged: (value) {
+              if (value.isNotEmpty) {
+                removeError(error: kEmailNullError);
+              } else if (emailValidatorRegExp.hasMatch(value)) {
+                removeError(error: kInvalidEmailError);
+              }
+              return;
+            },
+            validator: (value) {
+              if (value!.isEmpty) {
+                addError(error: kEmailNullError);
+                return "";
+              } else if (!emailValidatorRegExp.hasMatch(value)) {
+                addError(error: kInvalidEmailError);
+                return "";
+              }
+              return null;
+            },
+            decoration: const InputDecoration(
+              labelText: "Email",
+              hintText: "Enter your email",
+              // If  you are using latest version of flutter then lable text and hint text shown like this
+              // if you r using flutter less then 1.20.* then maybe this is not working properly
+              floatingLabelBehavior: FloatingLabelBehavior.always,
+              suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Mail.svg"),
+            ),
+          ),
+          SizedBox(height: 20),
+          TextFormField(
+            obscureText: true,
+            onSaved: (newValue) => password = newValue,
+            onChanged: (value) {
+              if (value.isNotEmpty) {
+                removeError(error: kPassNullError);
+              } else if (value.length >= 8) {
+                removeError(error: kShortPassError);
+              }
+              return;
+            },
+            validator: (value) {
+              if (value!.isEmpty) {
+                addError(error: kPassNullError);
+                return "";
+              } else if (value.length < 8) {
+                addError(error: kShortPassError);
+                return "";
+              }
+              return null;
+            },
+            decoration: const InputDecoration(
+              labelText: "Password",
+              hintText: "Enter your password",
+              // If  you are using latest version of flutter then lable text and hint text shown like this
+              // if you r using flutter less then 1.20.* then maybe this is not working properly
+              floatingLabelBehavior: FloatingLabelBehavior.always,
+              suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
+            ),
+          ),
+          SizedBox(height: 20),
           Row(
             children: [
               Checkbox(
@@ -72,7 +129,7 @@ class _SignFormState extends State<SignForm> {
             ],
           ),
           FormError(errors: errors),
-          SizedBox(height: getProportionateScreenHeight(20)),
+          SizedBox(height: 16),
           ElevatedButton(
             onPressed: () {
               if (_formKey.currentState!.validate()) {
@@ -85,72 +142,6 @@ class _SignFormState extends State<SignForm> {
             child: const Text("Continue"),
           ),
         ],
-      ),
-    );
-  }
-
-  TextFormField buildPasswordFormField() {
-    return TextFormField(
-      obscureText: true,
-      onSaved: (newValue) => password = newValue,
-      onChanged: (value) {
-        if (value.isNotEmpty) {
-          removeError(error: kPassNullError);
-        } else if (value.length >= 8) {
-          removeError(error: kShortPassError);
-        }
-        return;
-      },
-      validator: (value) {
-        if (value!.isEmpty) {
-          addError(error: kPassNullError);
-          return "";
-        } else if (value.length < 8) {
-          addError(error: kShortPassError);
-          return "";
-        }
-        return null;
-      },
-      decoration: const InputDecoration(
-        labelText: "Password",
-        hintText: "Enter your password",
-        // If  you are using latest version of flutter then lable text and hint text shown like this
-        // if you r using flutter less then 1.20.* then maybe this is not working properly
-        floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
-      ),
-    );
-  }
-
-  TextFormField buildEmailFormField() {
-    return TextFormField(
-      keyboardType: TextInputType.emailAddress,
-      onSaved: (newValue) => email = newValue,
-      onChanged: (value) {
-        if (value.isNotEmpty) {
-          removeError(error: kEmailNullError);
-        } else if (emailValidatorRegExp.hasMatch(value)) {
-          removeError(error: kInvalidEmailError);
-        }
-        return;
-      },
-      validator: (value) {
-        if (value!.isEmpty) {
-          addError(error: kEmailNullError);
-          return "";
-        } else if (!emailValidatorRegExp.hasMatch(value)) {
-          addError(error: kInvalidEmailError);
-          return "";
-        }
-        return null;
-      },
-      decoration: const InputDecoration(
-        labelText: "Email",
-        hintText: "Enter your email",
-        // If  you are using latest version of flutter then lable text and hint text shown like this
-        // if you r using flutter less then 1.20.* then maybe this is not working properly
-        floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Mail.svg"),
       ),
     );
   }

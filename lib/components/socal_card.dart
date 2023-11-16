@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../size_config.dart';
-
 class SocalCard extends StatelessWidget {
   const SocalCard({
     Key? key,
@@ -19,9 +17,9 @@ class SocalCard extends StatelessWidget {
       onTap: press as void Function()?,
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 10),
-        padding: EdgeInsets.all(getProportionateScreenWidth(12)),
-        height: getProportionateScreenHeight(40),
-        width: getProportionateScreenWidth(40),
+        padding: EdgeInsets.all(12),
+        height: 40,
+        width: 40,
         decoration: const BoxDecoration(
           color: Color(0xFFF5F6F9),
           shape: BoxShape.circle,

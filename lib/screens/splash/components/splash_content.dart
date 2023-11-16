@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
-import '../../../size_config.dart';
 
-class SplashContent extends StatelessWidget {
+class SplashContent extends StatefulWidget {
   const SplashContent({
     Key? key,
     this.text,
@@ -12,6 +11,11 @@ class SplashContent extends StatelessWidget {
   final String? text, image;
 
   @override
+  State<SplashContent> createState() => _SplashContentState();
+}
+
+class _SplashContentState extends State<SplashContent> {
+  @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
@@ -19,20 +23,20 @@ class SplashContent extends StatelessWidget {
         Text(
           "TOKOTO",
           style: TextStyle(
-            fontSize: getProportionateScreenWidth(36),
+            fontSize: 32,
             color: kPrimaryColor,
             fontWeight: FontWeight.bold,
           ),
         ),
         Text(
-          text!,
+          widget.text!,
           textAlign: TextAlign.center,
         ),
         const Spacer(flex: 2),
         Image.asset(
-          image!,
-          height: getProportionateScreenHeight(265),
-          width: getProportionateScreenWidth(235),
+          widget.image!,
+          height: 265,
+          width: 235,
         ),
       ],
     );

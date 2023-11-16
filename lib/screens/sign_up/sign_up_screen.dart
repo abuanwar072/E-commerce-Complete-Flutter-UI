@@ -19,7 +19,7 @@ class SignUpScreen extends StatelessWidget {
         child: SizedBox(
           width: double.infinity,
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: SingleChildScrollView(
               child: Column(
                 children: [
@@ -29,9 +29,9 @@ class SignUpScreen extends StatelessWidget {
                     "Complete your details or continue \nwith social media",
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(height: SizeConfig.screenHeight * 0.08),
+                  const SizedBox(height: 16),
                   const SignUpForm(),
-                  SizedBox(height: SizeConfig.screenHeight * 0.08),
+                  const SizedBox(height: 16),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -49,7 +49,7 @@ class SignUpScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: getProportionateScreenHeight(20)),
+                  const SizedBox(height: 16),
                   Text(
                     'By continuing your confirm that you agree \nwith our Term and Condition',
                     textAlign: TextAlign.center,
