@@ -68,9 +68,11 @@ packages:
   device_preview:
     dependency: "direct dev"
     description:
-      path: "local_package/device_preview"
-      relative: true
-    source: path
+      path: "."
+      ref: HEAD
+      resolved-ref: ad2d811af171ada440bcb203e8890c4c7945e211
+      url: "https://github.com/abuanwar072/device_preview.git"
+    source: git
     version: "1.1.0"
   fake_async:
     dependency: transitive

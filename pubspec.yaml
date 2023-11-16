@@ -48,7 +48,8 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
   device_preview:
-    path: local_package/device_preview
+    git:
+      url: https://github.com/abuanwar072/device_preview.git
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
