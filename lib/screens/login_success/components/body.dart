@@ -4,6 +4,8 @@ import '../../home/home_screen.dart';
 import '../../../size_config.dart';
 
 class Body extends StatelessWidget {
+  const Body({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -22,7 +24,7 @@ class Body extends StatelessWidget {
             color: Colors.black,
           ),
         ),
-        Spacer(),
+        const Spacer(),
         SizedBox(
           width: SizeConfig.screenWidth * 0.6,
           child: DefaultButton(
@@ -32,7 +34,7 @@ class Body extends StatelessWidget {
             },
           ),
         ),
-        Spacer(),
+        const Spacer(),
       ],
     );
   }

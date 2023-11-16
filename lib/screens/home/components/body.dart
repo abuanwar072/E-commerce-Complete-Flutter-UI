@@ -8,6 +8,8 @@ import 'popular_product.dart';
 import 'special_offers.dart';
 
 class Body extends StatelessWidget {
+  const Body({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -15,13 +17,13 @@ class Body extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: getProportionateScreenHeight(20)),
-            HomeHeader(),
+            const HomeHeader(),
             SizedBox(height: getProportionateScreenWidth(10)),
-            DiscountBanner(),
-            Categories(),
-            SpecialOffers(),
+            const DiscountBanner(),
+            const Categories(),
+            const SpecialOffers(),
             SizedBox(height: getProportionateScreenWidth(30)),
-            PopularProducts(),
+            const PopularProducts(),
             SizedBox(height: getProportionateScreenWidth(30)),
           ],
         ),

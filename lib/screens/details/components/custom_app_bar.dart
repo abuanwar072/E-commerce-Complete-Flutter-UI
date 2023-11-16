@@ -25,10 +25,9 @@ class CustomAppBar extends StatelessWidget {
               width: getProportionateScreenWidth(40),
               child: TextButton(
                 style: TextButton.styleFrom(
-                  shape: RoundedRectangleBorder(
+                  foregroundColor: kPrimaryColor, shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(60),
                   ),
-                  primary: kPrimaryColor,
                   backgroundColor: Colors.white,
                   padding: EdgeInsets.zero,
                 ),
@@ -39,7 +38,7 @@ class CustomAppBar extends StatelessWidget {
                 ),
               ),
             ),
-            Spacer(),
+            const Spacer(),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 5),
               decoration: BoxDecoration(

@@ -8,6 +8,8 @@ import '../../../size_config.dart';
 import '../../../constants.dart';
 
 class Body extends StatelessWidget {
+  const Body({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -27,12 +29,12 @@ class Body extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Text(
+              const Text(
                 "Please enter your email and we will send \nyou a link to return to your account",
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: SizeConfig.screenHeight * 0.1),
-              ForgotPassForm(),
+              const ForgotPassForm(),
             ],
           ),
         ),
@@ -42,6 +44,8 @@ class Body extends StatelessWidget {
 }
 
 class ForgotPassForm extends StatefulWidget {
+  const ForgotPassForm({super.key});
+
   @override
   _ForgotPassFormState createState() => _ForgotPassFormState();
 }
@@ -70,7 +74,7 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
                   errors.remove(kInvalidEmailError);
                 });
               }
-              return null;
+              return;
             },
             validator: (value) {
               if (value!.isEmpty && !errors.contains(kEmailNullError)) {
@@ -85,7 +89,7 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
               }
               return null;
             },
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               labelText: "Email",
               hintText: "Enter your email",
               // If  you are using latest version of flutter then lable text and hint text shown like this
@@ -106,7 +110,7 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
             },
           ),
           SizedBox(height: SizeConfig.screenHeight * 0.1),
-          NoAccountText(),
+          const NoAccountText(),
         ],
       ),
     );

@@ -7,17 +7,17 @@ class AppTheme {
     return ThemeData(
       scaffoldBackgroundColor: Colors.white,
       fontFamily: "Muli",
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
           color: Colors.white,
           elevation: 0,
           iconTheme: IconThemeData(color: Colors.black),
           titleTextStyle: TextStyle(color: Colors.black)),
-      textTheme: TextTheme(
+      textTheme: const TextTheme(
         bodyLarge: TextStyle(color: kTextColor),
         bodyMedium: TextStyle(color: kTextColor),
         bodySmall: TextStyle(color: kTextColor),
       ),
-      inputDecorationTheme: InputDecorationTheme(
+      inputDecorationTheme: const InputDecorationTheme(
         floatingLabelBehavior: FloatingLabelBehavior.always,
         contentPadding: EdgeInsets.symmetric(horizontal: 42, vertical: 20),
         enabledBorder: outlineInputBorder,

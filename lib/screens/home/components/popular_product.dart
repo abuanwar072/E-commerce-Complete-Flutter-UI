@@ -6,6 +6,8 @@ import '../../../size_config.dart';
 import 'section_title.dart';
 
 class PopularProducts extends StatelessWidget {
+  const PopularProducts({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -23,10 +25,11 @@ class PopularProducts extends StatelessWidget {
               ...List.generate(
                 demoProducts.length,
                 (index) {
-                  if (demoProducts[index].isPopular)
+                  if (demoProducts[index].isPopular) {
                     return ProductCard(product: demoProducts[index]);
+                  }
 
-                  return SizedBox
+                  return const SizedBox
                       .shrink(); // here by default width and height is 0
                 },
               ),
