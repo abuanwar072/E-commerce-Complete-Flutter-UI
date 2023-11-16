@@ -33,6 +33,7 @@ class AppTheme {
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(16)),
           ),
+          textStyle: const TextStyle(color: Colors.white),
         ),
       ),
     );

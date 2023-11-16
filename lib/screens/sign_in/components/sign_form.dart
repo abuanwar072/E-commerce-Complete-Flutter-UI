@@ -55,14 +55,14 @@ class _SignFormState extends State<SignForm> {
               return;
             },
             validator: (value) {
-              if (value!.isEmpty) {
-                addError(error: kEmailNullError);
-                return "";
-              } else if (!emailValidatorRegExp.hasMatch(value)) {
-                addError(error: kInvalidEmailError);
-                return "";
-              }
-              return null;
+              // if (value!.isEmpty) {
+              //   addError(error: kEmailNullError);
+              //   return "";
+              // } else if (!emailValidatorRegExp.hasMatch(value)) {
+              //   addError(error: kInvalidEmailError);
+              //   return "";
+              // }
+              // return null;
             },
             decoration: const InputDecoration(
               labelText: "Email",
@@ -86,14 +86,14 @@ class _SignFormState extends State<SignForm> {
               return;
             },
             validator: (value) {
-              if (value!.isEmpty) {
-                addError(error: kPassNullError);
-                return "";
-              } else if (value.length < 8) {
-                addError(error: kShortPassError);
-                return "";
-              }
-              return null;
+              // if (value!.isEmpty) {
+              //   addError(error: kPassNullError);
+              //   return "";
+              // } else if (value.length < 8) {
+              //   addError(error: kShortPassError);
+              //   return "";
+              // }
+              // return null;
             },
             decoration: const InputDecoration(
               labelText: "Password",
@@ -139,7 +139,7 @@ class _SignFormState extends State<SignForm> {
                 Navigator.pushNamed(context, LoginSuccessScreen.routeName);
               }
             },
-            child: const Text("Continue"),
+            child: const Text("Sign In"),
           ),
         ],
       ),
