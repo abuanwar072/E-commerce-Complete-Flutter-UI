@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'components/body.dart';
+import '../home/home_screen.dart';
 
 class LoginSuccessScreen extends StatelessWidget {
   static String routeName = "/login_success";
@@ -13,7 +13,35 @@ class LoginSuccessScreen extends StatelessWidget {
         leading: const SizedBox(),
         title: const Text("Login Success"),
       ),
-      body: const Body(),
+      body: Column(
+        children: [
+          const SizedBox(height: 16),
+          Image.asset(
+            "assets/images/success.png",
+            height: MediaQuery.of(context).size.height * 0.4, //40%
+          ),
+          const SizedBox(height: 16),
+          const Text(
+            "Login Success",
+            style: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+            ),
+          ),
+          const Spacer(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, HomeScreen.routeName);
+              },
+              child: const Text("Back to home"),
+            ),
+          ),
+          const Spacer(),
+        ],
+      ),
     );
   }
 }

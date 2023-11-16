@@ -60,9 +60,9 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
               suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Mail.svg"),
             ),
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           FormError(errors: errors),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           ElevatedButton(
             onPressed: () {
               if (_formKey.currentState!.validate()) {
@@ -71,7 +71,7 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
             },
             child: const Text("Continue"),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 16),
           const NoAccountText(),
         ],
       ),
