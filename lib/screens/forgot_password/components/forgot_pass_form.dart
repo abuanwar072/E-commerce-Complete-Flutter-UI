@@ -1,45 +1,9 @@
 import 'package:flutter/material.dart';
+
 import '../../../components/custom_surfix_icon.dart';
 import '../../../components/form_error.dart';
 import '../../../components/no_account_text.dart';
-import '../../../size_config.dart';
-
 import '../../../constants.dart';
-
-class Body extends StatelessWidget {
-  const Body({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      child: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Column(
-            children: [
-              SizedBox(height: SizeConfig.screenHeight * 0.04),
-              Text(
-                "Forgot Password",
-                style: TextStyle(
-                  fontSize: getProportionateScreenWidth(28),
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const Text(
-                "Please enter your email and we will send \nyou a link to return to your account",
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: SizeConfig.screenHeight * 0.1),
-              const ForgotPassForm(),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
 
 class ForgotPassForm extends StatefulWidget {
   const ForgotPassForm({super.key});
@@ -96,9 +60,9 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
               suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Mail.svg"),
             ),
           ),
-          SizedBox(height: getProportionateScreenHeight(30)),
+          SizedBox(height: 8),
           FormError(errors: errors),
-          SizedBox(height: SizeConfig.screenHeight * 0.1),
+          SizedBox(height: 8),
           ElevatedButton(
             onPressed: () {
               if (_formKey.currentState!.validate()) {
@@ -107,7 +71,7 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
             },
             child: const Text("Continue"),
           ),
-          SizedBox(height: SizeConfig.screenHeight * 0.1),
+          SizedBox(height: 20),
           const NoAccountText(),
         ],
       ),
