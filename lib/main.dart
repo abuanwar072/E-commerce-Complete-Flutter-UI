@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/screens/splash/splash_screen.dart';
+import 'package:device_preview/device_preview.dart';
 
 import 'routes.dart';
 import 'theme.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    DevicePreview(
+      enabled: true,
+      builder: (context) => const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -16,6 +22,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
       title: 'The Flutter Way - Template',
       theme: AppTheme.lightTheme(context),
       initialRoute: SplashScreen.routeName,
