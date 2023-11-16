@@ -21,8 +21,8 @@ class OtpScreen extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(height: 16),
-                Text(
+                const SizedBox(height: 16),
+                const Text(
                   "OTP Verification",
                   style: headingStyle,
                 ),
@@ -42,7 +42,7 @@ class OtpScreen extends StatelessWidget {
                   ],
                 ),
                 const OtpForm(),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 GestureDetector(
                   onTap: () {
                     // OTP code resend

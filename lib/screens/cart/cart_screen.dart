@@ -33,7 +33,7 @@ class _CartScreenState extends State<CartScreen> {
         ),
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         child: ListView.builder(
           itemCount: demoCarts.length,
           itemBuilder: (context, index) => Padding(

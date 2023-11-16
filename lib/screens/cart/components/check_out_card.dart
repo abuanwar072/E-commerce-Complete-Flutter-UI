@@ -11,7 +11,7 @@ class CheckoutCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
         vertical: 16,
         horizontal: 20,
       ),
@@ -57,11 +57,11 @@ class CheckoutCard extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Row(
               children: [
-                Expanded(
-                  child: const Text.rich(
+                const Expanded(
+                  child: Text.rich(
                     TextSpan(
                       text: "Total:\n",
                       children: [
@@ -76,7 +76,7 @@ class CheckoutCard extends StatelessWidget {
                 Expanded(
                   child: ElevatedButton(
                     onPressed: () {},
-                    child: Text("Check Out"),
+                    child: const Text("Check Out"),
                   ),
                 ),
               ],

@@ -72,7 +72,7 @@ class _SignUpFormState extends State<SignUpForm> {
               suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Mail.svg"),
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           TextFormField(
             obscureText: true,
             onSaved: (newValue) => password = newValue,
@@ -103,7 +103,7 @@ class _SignUpFormState extends State<SignUpForm> {
               suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           TextFormField(
             obscureText: true,
             onSaved: (newValue) => conform_password = newValue,
@@ -135,7 +135,7 @@ class _SignUpFormState extends State<SignUpForm> {
             ),
           ),
           FormError(errors: errors),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
               if (_formKey.currentState!.validate()) {

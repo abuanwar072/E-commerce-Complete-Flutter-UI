@@ -12,7 +12,7 @@ const kTextColor = Colors.black;
 
 const kAnimationDuration = Duration(milliseconds: 200);
 
-final headingStyle = TextStyle(
+const headingStyle = TextStyle(
   fontSize: 24,
   fontWeight: FontWeight.bold,
   color: Colors.black,
@@ -34,7 +34,7 @@ const String kPhoneNumberNullError = "Please Enter your phone number";
 const String kAddressNullError = "Please Enter your address";
 
 final otpInputDecoration = InputDecoration(
-  contentPadding: EdgeInsets.symmetric(vertical: 16),
+  contentPadding: const EdgeInsets.symmetric(vertical: 16),
   border: outlineInputBorder(),
   focusedBorder: outlineInputBorder(),
   enabledBorder: outlineInputBorder(),

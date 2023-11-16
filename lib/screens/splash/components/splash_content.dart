@@ -20,7 +20,7 @@ class _SplashContentState extends State<SplashContent> {
     return Column(
       children: <Widget>[
         const Spacer(),
-        Text(
+        const Text(
           "TOKOTO",
           style: TextStyle(
             fontSize: 32,
