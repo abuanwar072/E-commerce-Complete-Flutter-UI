@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/screens/complete_profile/complete_profile_screen.dart';
 import 'package:shop_app/screens/init_screen.dart';
 
 import 'routes.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       title: 'The Flutter Way - Template',
       theme: AppTheme.lightTheme(context),
       // initialRoute: SplashScreen.routeName,
-      initialRoute: InitScreen.routeName,
+      initialRoute: CompleteProfileScreen.routeName,
       routes: routes,
     );
   }
