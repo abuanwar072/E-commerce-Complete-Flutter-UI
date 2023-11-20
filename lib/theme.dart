@@ -5,6 +5,7 @@ import 'constants.dart';
 class AppTheme {
   static ThemeData lightTheme(BuildContext context) {
     return ThemeData(
+      // useMaterial3: false,
       scaffoldBackgroundColor: Colors.white,
       fontFamily: "Muli",
       appBarTheme: const AppBarTheme(
@@ -29,6 +30,7 @@ class AppTheme {
         style: ElevatedButton.styleFrom(
           elevation: 0,
           backgroundColor: kPrimaryColor,
+          foregroundColor: Colors.white,
           minimumSize: const Size(double.infinity, 48),
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(16)),
