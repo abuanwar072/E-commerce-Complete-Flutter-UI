@@ -13,6 +13,7 @@
   <a href="#" style="text-decoration: none;">
     <img src="readme image/buy_now_btn.png" alt="Full template" style="margin-right: 32px;">
   </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://abuanwar072.github.io/complete_shop/" style="text-decoration: none;">
     <img src="readme image/preview_btn.png" alt="Preview">
   </a>
