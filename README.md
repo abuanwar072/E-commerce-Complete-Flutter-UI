@@ -19,6 +19,7 @@
   </a>
 </p>
 
+<!-- Device image -->
 </br >
 </br >
 <p align="center">
@@ -29,13 +30,23 @@
 
 This shop app template comes with 100+ screens. Some of these pages are Splash, Login, Signup, Home, Product, Search, Cart, Profile, Payment, Wallet, Order Tracking, and Order History. Additionally, all pages support both light and dark themes.You just need to connect the UI to your preferred backend, such as Firebase, WordPress, or your custom API. You can do anything you want with it.
 
+<!-- Full preview -->
 </br >
 </br >
-
 <p align="center">
   <img src="https://public-files.gumroad.com/m3v3lyyipbzczcws5gcuhpbkmczk" alt="Build you shop app in days" style="width: 100%; height: auto;">
 </p>
 
+</br >
+</br >
+<!-- Buttons -->
+<p align="center">
+  <a href="https://app.gumroad.com/checkout?product=uxznc&option=B3wWhE6QH46cfm31C7jEmQ%3D%3D&quantity=1&referrer=https://github.com" style="text-decoration: none;" target="_blank">
+    <img src="readme image/buy_now_btn.png" alt="Full template" style="margin-right: 32px; width: 170px; height: 50px;">
+  </a>
+</p>
+
+<!-- Gif preview -->
 </br >
 </br >
 <p align="center">
