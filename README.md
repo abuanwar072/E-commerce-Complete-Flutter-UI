@@ -21,7 +21,9 @@
 
 <!-- Video -->
 <p align="center">
-  <iframe width="560" height="auto" src="https://www.youtube.com/embed/LpfX9Vdz6y4?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <a href="https://www.youtube.com/watch?v=LpfX9Vdz6y4" target="_blank">
+    <img src="https://img.youtube.com/vi/LpfX9Vdz6y4/0.jpg" alt="Watch the video" style="width: 560px; height: 315px;">
+  </a>
 </p>
 
 Some of these pages are Splash, Login, Signup, Home, Product, Search, Cart, Profile, Payment, Wallet, Order Tracking, and Order History. These are just a few of the 100+ screens available. Additionally, all pages support both light and dark themes.You just need to connect the UI to your preferred backend, such as Firebase, WordPress, or your custom API. You can do anything you want with it.
