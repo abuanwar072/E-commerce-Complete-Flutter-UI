@@ -21,7 +21,7 @@
 
 <!-- Video -->
 <p align="center">
-  <video width="auto" height="auto" controls autoplay poster="https://img.youtube.com/vi/LpfX9Vdz6y4/maxresdefault.jpg">
+  <video width="700" height="auto" controls autoplay poster="https://img.youtube.com/vi/LpfX9Vdz6y4/maxresdefault.jpg">
     <source src="readme%20image/preview_video_flutterSHop.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
