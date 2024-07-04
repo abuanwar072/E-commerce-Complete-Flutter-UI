@@ -10,12 +10,12 @@
 
 <!-- Buttons -->
 <p align="center">
-  <a href="#" style="text-decoration: none;">
-    <img src="readme image/buy_now_btn.png" alt="Full template" style="margin-right: 32px;">
+  <a href="your-buy-link" style="text-decoration: none;">
+    <img src="readme image/buy_now_btn.png" alt="Full template" style="margin-right: 32px; width: 170px; height: 50px;">
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://abuanwar072.github.io/complete_shop/" style="text-decoration: none;">
-    <img src="readme image/preview_btn.png" alt="Preview">
+  <a href="your-preview-link" style="text-decoration: none;">
+    <img src="readme image/preview_btn.png" alt="Preview" style="width: 170px; height: 50px;">
   </a>
 </p>
 
