@@ -1,7 +1,7 @@
 # Flutter E-Commerce App Template
 
 <p align="center">
-  <img src="readme%20image/Build%20you%20shop%20app%20in%20days.png" alt="Build you shop app in days" style="width: 643px; height: 168px;">
+  <img src="readme%20image/Build%20you%20shop%20app%20in%20days.png" alt="Build you shop app in days" style="width: 643px; height: auto;">
 </p>
 
 <p align="center">
