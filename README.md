@@ -1,7 +1,7 @@
 # Flutter E-Commerce App Template
 
 <p align="center">
-  <img src="readme%20image/Build%20you%20shop%20app%20in%20days.png" alt="Build you shop app in days">
+  <img src="readme%20image/Build%20you%20shop%20app%20in%20days.png" alt="Build you shop app in days" style="width: 400px; height: 128px;">
 </p>
 
 <p align="center">
@@ -10,12 +10,12 @@
 
 <!-- Buttons -->
 <p align="center">
-  <a href="your-buy-link" style="text-decoration: none;">
+  <a href="https://app.gumroad.com/checkout?product=uxznc&option=B3wWhE6QH46cfm31C7jEmQ%3D%3D&quantity=1&referrer=https://github.com" style="text-decoration: none;" target="_blank">
     <img src="readme image/buy_now_btn.png" alt="Full template" style="margin-right: 32px; width: 170px; height: 50px;">
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="your-preview-link" style="text-decoration: none;">
-    <img src="readme image/preview_btn.png" alt="Preview" style="width: 170px; height: 50px;">
+  <a href="https://abuanwar072.github.io/complete_shop/" style="text-decoration: none;" target="_blank">
+    <img src="readme image/preview_btn.png" alt="Preview" style="width: 136px; height: 50px;">
   </a>
 </p>
 
