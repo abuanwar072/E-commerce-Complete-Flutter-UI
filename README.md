@@ -19,12 +19,8 @@
   </a>
 </p>
 
-<!-- Video -->
 <p align="center">
-  <video width="560" height="315" controls>
-    <source src="readme%20image/preview_video_flutterSHop.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <img src="readme image/Device_frame.png" alt="Ecommerce app Home, product details page" style="width: 1100px; height: auto;">
 </p>
 
 Some of these pages are Splash, Login, Signup, Home, Product, Search, Cart, Profile, Payment, Wallet, Order Tracking, and Order History. These are just a few of the 100+ screens available. Additionally, all pages support both light and dark themes.You just need to connect the UI to your preferred backend, such as Firebase, WordPress, or your custom API. You can do anything you want with it.
