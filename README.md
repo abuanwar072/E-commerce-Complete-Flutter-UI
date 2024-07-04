@@ -68,11 +68,11 @@ If you want to learn how to build ecommerce template on Flutter [watch the playl
 
 Visit FlutterLibrary.com to Download the [Flutter e-commerce app template](https://www.flutterlibrary.com/templates/e-commerce-app) & other templates, and components.
 
-# Screens on the FlutterShop E-commerce Template
+## Screens on the FlutterShop E-commerce Template
 
 As mentioned, this kit contains 100+ nicely crafted minimal screens that cover everything you need!👇
 
-## Onboarding
+### Onboarding
 
 - Onboarding Choose item
 - Onboarding Add to cart
@@ -82,7 +82,7 @@ As mentioned, this kit contains 100+ nicely crafted minimal screens that cover e
 - Notification permission
 - Select language
 
-## Authentication
+### Authentication
 
 - Log in
 - Forgot password
@@ -98,7 +98,7 @@ As mentioned, this kit contains 100+ nicely crafted minimal screens that cover e
 - Enable fingerprint
 - Enable face ID
 
-## Product
+### Product
 
 - Product page
   - Notify when available (Out of stock)
@@ -113,7 +113,7 @@ As mentioned, this kit contains 100+ nicely crafted minimal screens that cover e
   - Added to cart message
   - Product gallery (Will be added soon)
 
-## Main Page
+### Main Page
 
 - Home page
 - On sales page
@@ -125,7 +125,7 @@ As mentioned, this kit contains 100+ nicely crafted minimal screens that cover e
   - Style 3 (Will be added soon)
 - Bookmark products page
 
-## Search
+### Search
 
 - Recent search (Search history)
 - Search suggestions
@@ -138,7 +138,7 @@ As mentioned, this kit contains 100+ nicely crafted minimal screens that cover e
 - Search results
   - Product not found
 
-## Cart
+### Cart
 
 - Products on Cart
 - Empty cart
@@ -152,7 +152,7 @@ As mentioned, this kit contains 100+ nicely crafted minimal screens that cover e
 - Add new card
 - Scan card (Will be added soon)
 
-## Profile
+### Profile
 
 - Account
   - Normal version
@@ -180,7 +180,7 @@ As mentioned, this kit contains 100+ nicely crafted minimal screens that cover e
     - Chat
   - Preferences
 
-## Order
+### Order
 
 - Account Orders
   - Processing orders
@@ -190,14 +190,14 @@ As mentioned, this kit contains 100+ nicely crafted minimal screens that cover e
   - Return orders (Will be added soon)
   - More screens added in that sector soon
 
-## Return & Request (Will be added soon)
+### Return & Request (Will be added soon)
 
 - Return order list
 - Empty return order
 - Return order
 - Return detail
 
-## Error & Permission
+### Error & Permission
 
 - Notification permission
 - No notification
