@@ -43,6 +43,13 @@ This shop app template comes with 100+ screens. Some of these pages are Splash, 
 
 ![FlutterShop E-commerce Template Project Structure](https://public-files.gumroad.com/v1kbfvdugf3urvw03qrqgmc5pl1c)
 
+<!-- Full preview -->
+</br >
+</br >
+<p align="center">
+  <img src="https://public-files.gumroad.com/m3v3lyyipbzczcws5gcuhpbkmczk" alt="Build you shop app in days" style="width: 100%; height: auto;">
+</p>
+
 ### Loading is no longer boring [New update V1.1] [Doc](https://abu-anwar.gitbook.io/fluttershop-doc/custom-loading)
 
 The progress indicator that comes with Flutter, by default is okay in most places, but not in every place. Especially when you build an ecommerce app. This is why we have created a custom loading effect that boosts your user engagement even during the loading process. This kind of loading is common in popular apps like YouTube and LinkedIn. It's a small detail, but it makes a big difference.
@@ -197,12 +204,7 @@ If you want to learn how to build ecommerce template on Flutter [watch the playl
 
 Visit FlutterLibrary.com to Download the [Flutter e-commerce app template](https://www.flutterlibrary.com/templates/e-commerce-app) & other templates, and components.
 
-<!-- Full preview -->
-</br >
-</br >
-<p align="center">
-  <img src="https://public-files.gumroad.com/m3v3lyyipbzczcws5gcuhpbkmczk" alt="Build you shop app in days" style="width: 100%; height: auto;">
-</p>
+
 
 </br >
 </br >
