@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shop/components/product/secondary_product_card.dart';
-import 'package:shop/models/product_model.dart';
+import '../../../../components/product/secondary_product_card.dart';
+import '../../../../models/product_model.dart';
 
 import '../../../../constants.dart';
 import '../../../../route/route_constants.dart';

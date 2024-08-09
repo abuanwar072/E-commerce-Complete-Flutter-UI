@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:shop/components/network_image_with_loader.dart';
+import '../../../../components/network_image_with_loader.dart';
 
 import '../../../../constants.dart';
 
@@ -69,7 +69,10 @@ class ProfileCard extends StatelessWidget {
       trailing: isShowArrow
           ? SvgPicture.asset(
               "assets/icons/miniRight.svg",
-              color: Theme.of(context).iconTheme.color!.withOpacity(0.4),
+              colorFilter: ColorFilter.mode(
+                Theme.of(context).iconTheme.color!.withOpacity(0.4),
+                BlendMode.srcIn,
+              ), // This is the line that is different
             )
           : null,
     );

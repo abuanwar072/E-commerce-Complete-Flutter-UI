@@ -35,7 +35,9 @@ class ProductQuantity extends StatelessWidget {
                     padding: const EdgeInsets.all(defaultPadding / 2)),
                 child: SvgPicture.asset(
                   "assets/icons/Minus.svg",
-                  color: Theme.of(context).iconTheme.color,
+                  colorFilter: ColorFilter.mode(
+                      Theme.of(context).iconTheme.color!, BlendMode.srcIn,
+                  ),
                 ),
               ),
             ),
@@ -60,7 +62,9 @@ class ProductQuantity extends StatelessWidget {
                     padding: const EdgeInsets.all(defaultPadding / 2)),
                 child: SvgPicture.asset(
                   "assets/icons/Plus1.svg",
-                  color: Theme.of(context).iconTheme.color,
+                  colorFilter: ColorFilter.mode(
+                      Theme.of(context).iconTheme.color!, BlendMode.srcIn,
+                  ),
                 ),
               ),
             ),

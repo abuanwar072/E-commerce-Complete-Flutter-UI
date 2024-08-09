@@ -52,7 +52,8 @@ class NotifyMeCard extends StatelessWidget {
                     ),
                     child: SvgPicture.asset(
                       "assets/icons/Notification.svg",
-                      color: Colors.white,
+                      colorFilter:
+                          const ColorFilter.mode(Colors.white, BlendMode.srcIn),
                     ),
                   ),
                 ),

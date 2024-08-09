@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:shop/components/dot_indicators.dart';
-import 'package:shop/constants.dart';
-import 'package:shop/route/route_constants.dart';
+import '../../../components/dot_indicators.dart';
+import '../../../constants.dart';
+import '../../../route/route_constants.dart';
 
 import 'components/onbording_content.dart';
 

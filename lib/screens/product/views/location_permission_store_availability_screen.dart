@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:shop/theme/input_decoration_theme.dart';
+import '../../../theme/input_decoration_theme.dart';
 
 import '../../../constants.dart';
 
@@ -51,10 +51,12 @@ class LocationPermissonStoreAvailabilityScreen extends StatelessWidget {
                             child: SvgPicture.asset(
                               "assets/icons/Search.svg",
                               height: 24,
-                              color: Theme.of(context)
-                                  .inputDecorationTheme
-                                  .hintStyle!
-                                  .color,
+                              colorFilter: ColorFilter.mode(
+                                  Theme.of(context)
+                                      .inputDecorationTheme
+                                      .hintStyle!
+                                      .color!,
+                                  BlendMode.srcIn),
                             ),
                           ),
                         ),

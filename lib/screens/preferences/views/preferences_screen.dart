@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shop/constants.dart';
+import '../../../constants.dart';
 
 import 'components/prederence_list_tile.dart';
 

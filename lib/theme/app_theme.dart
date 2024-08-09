@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shop/theme/button_theme.dart';
-import 'package:shop/theme/input_decoration_theme.dart';
+import 'button_theme.dart';
+import 'input_decoration_theme.dart';
 
 import '../constants.dart';
 import 'checkbox_themedata.dart';
