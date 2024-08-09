@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:shop/components/network_image_with_loader.dart';
+import '../../../../components/network_image_with_loader.dart';
 
 import '../../../../constants.dart';
 

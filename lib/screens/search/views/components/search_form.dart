@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:shop/theme/input_decoration_theme.dart';
+import '../../../../theme/input_decoration_theme.dart';
 
 class SearchForm extends StatelessWidget {
   const SearchForm({

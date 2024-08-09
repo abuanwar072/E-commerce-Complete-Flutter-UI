@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:shop/components/cart_button.dart';
-import 'package:shop/components/custom_modal_bottom_sheet.dart';
-import 'package:shop/components/network_image_with_loader.dart';
-import 'package:shop/screens/product/views/added_to_cart_message_screen.dart';
-import 'package:shop/screens/product/views/components/product_list_tile.dart';
-import 'package:shop/screens/product/views/location_permission_store_availability_screen.dart';
-import 'package:shop/screens/product/views/size_guide_screen.dart';
+import '../../../components/cart_button.dart';
+import '../../../components/custom_modal_bottom_sheet.dart';
+import '../../../components/network_image_with_loader.dart';
+import 'added_to_cart_message_screen.dart';
+import 'components/product_list_tile.dart';
+import 'location_permission_store_availability_screen.dart';
+import 'size_guide_screen.dart';
 
 import '../../../constants.dart';
 import 'components/product_quantity.dart';
