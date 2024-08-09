@@ -51,10 +51,12 @@ class LocationPermissonStoreAvailabilityScreen extends StatelessWidget {
                             child: SvgPicture.asset(
                               "assets/icons/Search.svg",
                               height: 24,
-                              color: Theme.of(context)
-                                  .inputDecorationTheme
-                                  .hintStyle!
-                                  .color,
+                              colorFilter: ColorFilter.mode(
+                                  Theme.of(context)
+                                      .inputDecorationTheme
+                                      .hintStyle!
+                                      .color!,
+                                  BlendMode.srcIn),
                             ),
                           ),
                         ),
