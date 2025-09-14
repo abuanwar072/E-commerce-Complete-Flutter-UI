@@ -1,0 +1,47 @@
+name: Flutter Release APK
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-release-apk:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout the repo
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Set up Flutter
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.13.0'
+
+      # 3. Install dependencies
+      - name: Install dependencies
+        run: flutter pub get
+
+      # 4. Run Flutter analyze
+      - name: Analyze code
+        run: flutter analyze
+
+      # 5. Run tests (if any)
+      - name: Run tests
+        run: flutter test
+
+      # 6. Build Release APK
+      - name: Build release APK
+        run: flutter build apk --release --target-platform android-arm,android-arm64,android-x64
+
+      # 7. Upload Release APK
+      - name: Upload Release APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-apk
+          path: build/app/outputs/flutter-apk/app-release.apk
